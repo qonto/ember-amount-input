@@ -1,0 +1,19 @@
+{{#docs-viewer as |viewer|}}
+
+  {{#viewer.nav as |nav|}}
+    {{nav.section "Getting started"}}
+    {{nav.item "Installation" "docs.installation"}}
+
+    {{nav.section "Components usage"}}
+    {{nav.item "amount-input" "docs.components.amount-input"}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    <div class="docs-container">
+      <div class="docs-section">
+        {{outlet}}
+      </div>
+    </div>
+  {{/viewer.main}}
+
+{{/docs-viewer}}

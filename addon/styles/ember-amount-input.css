@@ -1,0 +1,54 @@
+.amount-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: border-color 0.5s;
+
+  font-size: 13px;
+}
+
+.amount-input__currency {
+  position: absolute;
+  margin-left: 12px;
+  pointer-events: none;
+  color: #b8bccc;
+}
+
+.amount-input__currency.black {
+  color: inherit;
+}
+
+.amount-input__value {
+  width: 100%;
+  font-size: 13px;
+  padding: 6px 12px 6px 41px;
+  border: 1px solid #e9eaf0; /* TODO: import as variable? */
+  border-radius: 3px;
+  transition: border-color 0.5s;
+}
+
+.amount-input__value:focus {
+  border-color: #6b5aed;
+}
+
+.amount-input__value::placeholder {
+  color: #b8bccc; /* TODO: import as variable? */
+}
+
+.amount-input__value.disabled {
+  background-color: #f5f6fa;
+  cursor: not-allowed;
+}
+
+/* Remove spin button  */
+
+.amount-input input[type='number']::-webkit-inner-spin-button,
+.amount-input input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount-input input[type='number'] {
+  -moz-appearance: textfield;
+}
