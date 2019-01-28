@@ -1,28 +1,11 @@
 ember-amount-input
 ==============================================================================
 
-[Short description of the addon.]
+[![Build Status](https://img.shields.io/travis/qonto/ember-phone-input.svg?style=flat-square)](https://travis-ci.com/qonto/ember-amount-input)
 
+Easily create a money input with the currency of your liking.
 
-Compatibility
-------------------------------------------------------------------------------
-
-* Ember.js v2.18 or above
-* Ember CLI v2.13 or above
-
-
-Installation
-------------------------------------------------------------------------------
-
-```
-ember install ember-amount-input
-```
-
-
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
+[View the docs here](https://qonto.github.io/ember-amount-input/versions/master).
 
 
 License

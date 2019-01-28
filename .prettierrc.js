@@ -1,5 +1,6 @@
 'use strict'
 
 module.exports = {
-  extends: 'recommended'
+  semi: false,
+  singleQuote: true
 }

@@ -12,7 +12,6 @@
 
 # misc
 /coverage/
-!.*
 
 # ember-try
 /.node_modules.ember-try/
