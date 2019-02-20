@@ -34,6 +34,7 @@
 
 .amount-input__value::placeholder {
   color: #b8bccc; /* TODO: import as variable? */
+  opacity: 1; /* Needs to be forced as firefox and ember-cli-addon-docs reduce it */
 }
 
 .amount-input__value.disabled {
