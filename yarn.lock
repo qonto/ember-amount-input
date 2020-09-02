@@ -6615,6 +6615,13 @@ ember-source-channel-url@^2.0.1:
   dependencies:
     got "^8.0.1"
 
+ember-source-channel-url@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ember-source-channel-url/-/ember-source-channel-url-3.0.0.tgz#bcd5be72c63fa0b8c390b3121783b462063e2a1b"
+  integrity sha512-vF/8BraOc66ZxIDo3VuNP7iiDrnXEINclJgSJmqwAAEpg84Zb1DHPI22XTXSDA+E8fW5btPUxu65c3ZXi8AQFA==
+  dependencies:
+    node-fetch "^2.6.0"
+
 ember-source@^3.11.1:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.12.0.tgz#92f72894836d4497e704901c1d061c61b066bddf"
@@ -14314,11 +14321,6 @@ workerpool@^3.1.1, workerpool@^3.1.2:
     "@babel/core" "^7.3.4"
     object-assign "4.1.1"
     rsvp "^4.8.4"
-
-workerpool@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.0.0.tgz#85aad67fa1a2c8ef9386a1b43539900f61d03d58"
-  integrity sha512-fU2OcNA/GVAJLLyKUoHkAgIhKb0JoCpSjLC/G2vYKxUjVmQwGbRVeoPJ1a8U4pnVofz4AQV5Y/NEw8oKqxEBtA==
 
 workerpool@^6.0.0:
   version "6.0.0"
