@@ -1,6 +1,10 @@
 import Component from '@ember/component'
 import layout from './template'
 
+const KEY_CODE_E = 69
+const KEY_CODE_FULLSTOP = 190
+const KEY_CODE_COMMA = 188
+
 /**
   A amount/money input component. Usage:
 
@@ -71,6 +75,17 @@ export default Component.extend({
     @required
   */
   update() {},
+
+  keyDown(event) {
+    if (event.keyCode === KEY_CODE_E) {
+      return false
+    } else if (
+      this.numberOfDecimal === 0 &&
+      [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(event.keyCode)
+    ) {
+      return false
+    }
+  },
 
   input(e) {
     var { value } = e.target
