@@ -1,3 +1,19 @@
+
+## v2.1.0 (2020-09-03)
+
+#### :rocket: Enhancement
+* [#200](https://github.com/qonto/ember-amount-input/pull/200) input mask ".", "," when numberOfDecimal=0 and always mask e key ([@izelnakri](https://github.com/izelnakri))
+* [#197](https://github.com/qonto/ember-amount-input/pull/197) :wheelchair: add id attribute to input ([@mattfrankjames](https://github.com/mattfrankjames))
+
+#### :memo: Documentation
+* [#211](https://github.com/qonto/ember-amount-input/pull/211) Add RELEASE instructions ([@dcyriller](https://github.com/dcyriller))
+
+#### Committers: 4
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+- Izel Nakri ([@izelnakri](https://github.com/izelnakri))
+- Matt James ([@mattfrankjames](https://github.com/mattfrankjames))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v2.0.0 (2020-01-03)
 
 #### :boom: Breaking Change

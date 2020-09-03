@@ -3,7 +3,7 @@
 Here are the steps:
 1. Run these commands
 ```bash
-- yarn lerna-changelog --from=previous-tag >> CHANGELOG.md (manual cleanup)
+- echo "$(lerna-changelog --from=v2.0.0)\n$(cat CHANGELOG.md)" > CHANGELOG.md
 - git commit -m "Update CHANGELOG for the release"
 - yarn version
 - git push origin master the-new-tag
