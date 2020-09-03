@@ -39,7 +39,7 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.dom('input').hasAttribute('placeholder', '1.000.000')
   })
 
-  test('e and . key should be masked when numberOfDecimal={{0}}', async function(assert) {
+  test('e, . and , key should be masked when numberOfDecimal={{0}}', async function(assert) {
     this.set('value', 1)
 
     await render(hbs`
@@ -85,5 +85,15 @@ module('Integration | Component | amount-input', function(hooks) {
     await blur('input')
 
     assert.dom('input').hasValue('')
+
+    await typeIn('input', ',61')
+    await blur('input')
+
+    assert.dom('input').hasValue('61')
+
+    await typeIn('input', '0,61')
+    await blur('input')
+
+    assert.dom('input').hasValue('61')
   })
 })

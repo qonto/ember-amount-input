@@ -3,6 +3,7 @@ import layout from './template'
 
 const KEY_CODE_E = 69
 const KEY_CODE_FULLSTOP = 190
+const KEY_CODE_COMMA = 188
 
 /**
   A amount/money input component. Usage:
@@ -80,7 +81,7 @@ export default Component.extend({
       return false
     } else if (
       this.numberOfDecimal === 0 &&
-      event.keyCode === KEY_CODE_FULLSTOP
+      [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(event.keyCode)
     ) {
       return false
     }
