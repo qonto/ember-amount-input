@@ -59,7 +59,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "lerna-changelog": "^1.0.1",
     "loader.js": "^4.7.0",
-    "prettier": "^1.18.2",
+    "prettier": "^2.2.1",
     "qunit-dom": "^1.6.0"
   },
   "engines": {
