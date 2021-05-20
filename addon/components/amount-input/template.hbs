@@ -1,10 +1,10 @@
-<span class="amount-input__currency {{ if value "black" }}">{{currency}}</span>
+<span class="amount-input__currency {{ if this.value "black" }}">{{this.currency}}</span>
 
 <input
-  class="amount-input__value {{ inputClass }} {{ if disabled "disabled" }}"
+  class="amount-input__value {{ this.inputClass }} {{ if this.disabled "disabled" }}"
   id="amount-input"
   type="number"
-  value={{value}}
-  step={{step}}
-  placeholder={{placeholder}}
-  disabled={{disabled}} >
+  value={{this.value}}
+  step={{this.step}}
+  placeholder={{this.placeholder}}
+  disabled={{this.disabled}} >
