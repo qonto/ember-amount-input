@@ -74,5 +74,5 @@
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-  "homepage": "https://qonto.github.io/ember-amount-input"
+  "homepage": "https://qonto.github.io/ember-amount-input/versions/master"
 }
