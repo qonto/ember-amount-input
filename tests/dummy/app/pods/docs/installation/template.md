@@ -1,17 +1,17 @@
 # Installation
 
 ```sh
-ember install amount-input
+ember install ember-amount-input
 ```
 
 or, as there is no ember-cli script in this package:
 
 ```sh
-yarn install -D amount-input
+yarn install -D ember-amount-input
 ```
 
 or
 
 ```sh
-npm install --save-dev amount-input
+npm install --save-dev ember-amount-input
 ```
