@@ -27,6 +27,13 @@ export default Component.extend({
   currency: 'EUR',
 
   /**
+     Specifies if the input is read only, default is false
+     @argument readonly
+     @type Boolean?
+   */
+  readonly: false,
+
+  /**
     A custom class applied on the input
     @argument inputClass
     @type String?

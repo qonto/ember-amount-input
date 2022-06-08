@@ -15,6 +15,23 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.dom('input').hasAttribute('type', 'number')
   })
 
+  test('Should not type in when readonly attribute is true', async function(assert) {
+    this.set('value', 1)
+
+    await render(hbs`
+      {{amount-input
+        currency="USD"
+        numberOfDecimal=0
+        placeholder="1.000.000"
+        step=1
+        value=value
+        update=(action (mut value)) 
+        readonly=true}}
+    `)
+
+    assert.rejects(typeIn('input', '9'))
+  })
+
   test('Arguments work properly', async function(assert) {
     this.set('value', 1)
 
