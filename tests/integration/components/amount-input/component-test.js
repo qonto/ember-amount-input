@@ -61,6 +61,8 @@ module('Integration | Component | amount-input', function(hooks) {
 
     assert.dom('input').hasValue('231')
 
+    //Reset the value of input
+    await fillIn('input', '')
     await typeIn('input', '.')
     await blur('input')
 
