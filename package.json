@@ -5,9 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "ember": {
-    "edition": "octane"
-  },
+  "homepage": "https://qonto.github.io/ember-amount-input/versions/master",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qonto/ember-amount-input.git"
@@ -38,6 +36,8 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
+    "@glimmer/component": "^1.0.0",
+    "@glimmer/tracking": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.2",
@@ -79,8 +79,10 @@
   "engines": {
     "node": "14.* || >= 16.*"
   },
+  "ember": {
+    "edition": "octane"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "homepage": "https://qonto.github.io/ember-amount-input/versions/master"
+  }
 }
