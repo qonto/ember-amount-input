@@ -1,7 +1,4 @@
-import {
-  classNames,
-  layout as templateLayout
-} from '@ember-decorators/component'
+import { layout as templateLayout } from '@ember-decorators/component'
 import Component from '@ember/component'
 import layout from './template'
 
@@ -20,7 +17,6 @@ const KEY_CODE_COMMA = 188
   @public
 */
 @templateLayout(layout)
-@classNames('amount-input')
 export default class AmountInput extends Component {
   /**
     The currency displayed in the input
