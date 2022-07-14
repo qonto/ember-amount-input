@@ -1,3 +1,7 @@
+import {
+  classNames,
+  layout as templateLayout
+} from '@ember-decorators/component'
 import Component from '@ember/component'
 import layout from './template'
 
@@ -15,23 +19,22 @@ const KEY_CODE_COMMA = 188
   @class AmountInput
   @public
 */
-export default Component.extend({
-  layout,
-  classNames: ['amount-input'],
-
+@templateLayout(layout)
+@classNames('amount-input')
+export default class AmountInput extends Component {
   /**
     The currency displayed in the input
     @argument currency
     @type String?
   */
-  currency: 'EUR',
+  currency = 'EUR'
 
   /**
     A custom class applied on the input
     @argument inputClass
     @type String?
   */
-  inputClass: null,
+  inputClass = null
 
   /**
     Defines the argument sent to toFixed()
@@ -39,14 +42,14 @@ export default Component.extend({
     @argument numberOfDecimal
     @type Number?
   */
-  numberOfDecimal: 2,
+  numberOfDecimal = 2
 
   /**
     The placeholder
     @argument placeholder
     @type String?
   */
-  placeholder: '0.00',
+  placeholder = '0.00'
 
   /**
     The input's value.
@@ -55,7 +58,7 @@ export default Component.extend({
     @type Number
     @required
   */
-  value: null,
+  value = null
 
   /**
     Specifies the number intervals for the input field
@@ -64,7 +67,7 @@ export default Component.extend({
     @argument step
     @type Number?
   */
-  step: 0.01,
+  step = 0.01
 
   /**
     Function triggered when onInput and onFocusOut with the new value
@@ -74,7 +77,7 @@ export default Component.extend({
     @param Number value
     @required
   */
-  update() {},
+  update() {}
 
   keyDown(event) {
     if (event.keyCode === KEY_CODE_E) {
@@ -85,13 +88,13 @@ export default Component.extend({
     ) {
       return false
     }
-  },
+  }
 
   input(e) {
     var { value } = e.target
     this.update(value)
     return true
-  },
+  }
 
   focusOut() {
     if (this.value) {
@@ -100,4 +103,4 @@ export default Component.extend({
       this.update(floatValue.toFixed(this.numberOfDecimal))
     }
   }
-})
+}

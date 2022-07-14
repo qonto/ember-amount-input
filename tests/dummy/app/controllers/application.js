@@ -1,12 +1,12 @@
+import { action } from '@ember/object'
 import Controller from '@ember/controller'
 
-export default Controller.extend({
-  isExpanded: false,
-  value: null,
+export default class ApplicationController extends Controller {
+  isExpanded = false
+  value = null
 
-  actions: {
-    handleUpdate(value) {
-      this.set('value', value)
-    }
+  @action
+  handleUpdate(value) {
+    this.set('value', value)
   }
-})
+}
