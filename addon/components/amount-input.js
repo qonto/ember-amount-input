@@ -26,6 +26,12 @@ export default class AmountInput extends Component {
   }
 
   /**
+    Disable the input
+    @argument disabled
+    @type Boolean?
+  */
+
+  /**
     A custom class applied on the input
     @argument inputClass
     @type String?
