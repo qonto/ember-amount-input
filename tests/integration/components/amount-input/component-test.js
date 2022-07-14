@@ -24,8 +24,8 @@ module('Integration | Component | amount-input', function(hooks) {
         numberOfDecimal=0
         placeholder="1.000.000"
         step=1
-        value=value
-        update=(action (mut value)) }}
+        value=this.value
+        update=(action (mut this.value)) }}
     `)
 
     assert.dom('.amount-input__currency').hasText('USD')
@@ -45,8 +45,8 @@ module('Integration | Component | amount-input', function(hooks) {
     await render(hbs`
       {{amount-input
         numberOfDecimal=0
-        value=value
-        update=(action (mut value)) }}
+        value=this.value
+        update=(action (mut this.value)) }}
     `)
 
     assert.dom('input').hasValue('1')
