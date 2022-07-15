@@ -26,8 +26,7 @@ module.exports = async function() {
         name: 'ember-release',
         npm: {
           devDependencies: {
-            'ember-source': await getChannelURL('release'),
-            'ember-cli-addon-docs': '^5.0.0'
+            'ember-source': await getChannelURL('release')
           }
         }
       },
@@ -35,8 +34,7 @@ module.exports = async function() {
         name: 'ember-beta',
         npm: {
           devDependencies: {
-            'ember-source': await getChannelURL('beta'),
-            'ember-cli-addon-docs': '^5.0.0'
+            'ember-source': await getChannelURL('beta')
           }
         }
       },
@@ -44,8 +42,7 @@ module.exports = async function() {
         name: 'ember-canary',
         npm: {
           devDependencies: {
-            'ember-source': await getChannelURL('canary'),
-            'ember-cli-addon-docs': '^5.0.0'
+            'ember-source': await getChannelURL('canary')
           }
         }
       },
