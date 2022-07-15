@@ -9,7 +9,7 @@ const KEY_CODE_COMMA = 188
   A amount/money input component. Usage:
 
   ```hbs
-    {{amount-input value=value update=(action (mut value))}}
+    <AmountInput @value={{this.value}} @update={{fn (mut this.value)}}/>
   ```
 
   @class AmountInput

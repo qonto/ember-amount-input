@@ -8,7 +8,7 @@ module('Integration | Component | amount-input', function(hooks) {
 
   test('Input should be of type number', async function(assert) {
     await render(hbs`
-      {{amount-input}}
+      <AmountInput/>
     `)
 
     assert.dom('.amount-input').exists
@@ -19,13 +19,13 @@ module('Integration | Component | amount-input', function(hooks) {
     this.set('value', 1)
 
     await render(hbs`
-      {{amount-input
-        currency="USD"
-        numberOfDecimal=0
-        placeholder="1.000.000"
-        step=1
-        value=this.value
-        update=(action (mut this.value)) }}
+      <AmountInput
+        @currency="USD"
+        @numberOfDecimal={{0}}
+        @placeholder="1.000.000"
+        @step={{1}}
+        @value={{this.value}}
+        @update={{fn (mut this.value)}} />
     `)
 
     assert.dom('.amount-input__currency').hasText('USD')
@@ -43,10 +43,11 @@ module('Integration | Component | amount-input', function(hooks) {
     this.set('value', 1)
 
     await render(hbs`
-      {{amount-input
-        numberOfDecimal=0
-        value=this.value
-        update=(action (mut this.value)) }}
+      <AmountInput
+        @numberOfDecimal={{0}}
+        @value={{this.value}}
+        @update={{fn (mut this.value)}}
+      />
     `)
 
     assert.dom('input').hasValue('1')

@@ -4,9 +4,10 @@
 
 <DocsDemo as |demo|>
   <demo.example @name="amount-input-base">
-    {{amount-input
-      value=value
-      update=(action (mut value)) }}
+    <AmountInput
+      @value={{this.value}}
+      @update={{fn (mut this.value)}}
+    />
   </demo.example>
   <demo.snippet @name="amount-input-base"/>
 </DocsDemo>
@@ -15,9 +16,10 @@
 
 <DocsDemo as |demo|>
   <demo.example @name="amount-input-disabled">
-    {{amount-input
-      value=924.67
-      disabled=true }}
+    <AmountInput
+      @value={{924.67}}
+      @disabled={{true}}
+    />
   </demo.example>
   <demo.snippet @name="amount-input-disabled"/>
 </DocsDemo>
@@ -26,13 +28,14 @@
 
 <DocsDemo as |demo|>
   <demo.example @name="amount-input-params">
-    {{amount-input
-      placeholder="1.000.000"
-      step=1
-      currency="USD"
-      numberOfDecimal=0
-      value=valueParams
-      update=(action (mut valueParams)) }}
+    <AmountInput
+      @placeholder="1.000.000"
+      @step={{1}}
+      @currency="USD"
+      @numberOfDecimal={{0}}
+      @value={{this.valueParams}}
+      @update={{fn (mut this.valueParams)}}
+    />
   </demo.example>
   <demo.snippet @name="amount-input-params"/>
 </DocsDemo>
