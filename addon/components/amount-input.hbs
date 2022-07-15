@@ -1,0 +1,18 @@
+<div class='amount-input' ...attributes>
+  <span class="amount-input__currency {{if @value 'black'}}">
+    {{this.currency}}
+  </span>
+
+  <input
+    class="amount-input__value {{@inputClass}} {{if @disabled 'disabled'}}"
+    id='amount-input'
+    type='number'
+    value={{@value}}
+    step={{this.step}}
+    placeholder={{this.placeholder}}
+    disabled={{@disabled}}
+    {{on 'keydown' this.onKeyDown}}
+    {{on 'input' this.onInput}}
+    {{on 'focusout' this.onFocusOut}}
+  />
+</div>
