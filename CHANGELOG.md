@@ -1,3 +1,27 @@
+
+## v4.0.0 (2022-07-18)
+
+#### :boom: Breaking Change
+* [#365](https://github.com/qonto/ember-amount-input/pull/365) Drop node 12 support ([@mrloop](https://github.com/mrloop))
+
+#### :bug: Bug Fix
+* [#370](https://github.com/qonto/ember-amount-input/pull/370) Use pre octane default named argument handling. ([@mrloop](https://github.com/mrloop))
+
+#### :memo: Documentation
+* [#367](https://github.com/qonto/ember-amount-input/pull/367) Document the @disabled argument ([@mrloop](https://github.com/mrloop))
+* [#368](https://github.com/qonto/ember-amount-input/pull/368) Use angle bracket syntax for amount-input ([@mrloop](https://github.com/mrloop))
+* [#360](https://github.com/qonto/ember-amount-input/pull/360) Update docs to allow further dependency updates ([@mrloop](https://github.com/mrloop))
+* [#308](https://github.com/qonto/ember-amount-input/pull/308) Update template.md ([@evidencefrank](https://github.com/evidencefrank))
+* [#285](https://github.com/qonto/ember-amount-input/pull/285) Update homepage URL ([@mrloop](https://github.com/mrloop))
+
+#### :house: Internal
+* [#336](https://github.com/qonto/ember-amount-input/pull/336) CI: Automate release ([@zeppelin](https://github.com/zeppelin))
+
+#### Committers: 3
+- Ewan McDougall ([@mrloop](https://github.com/mrloop))
+- Frank ([@evidencefrank](https://github.com/evidencefrank))
+- Gabor Babicz ([@zeppelin](https://github.com/zeppelin))
+
 ## v3.0.0 (2021-05-20)
 
 #### :boom: Breaking Change
