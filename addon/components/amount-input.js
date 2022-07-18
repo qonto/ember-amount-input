@@ -16,13 +16,20 @@ const KEY_CODE_COMMA = 188
   @public
 */
 export default class AmountInput extends Component {
+  argOrDefault(arg, defaultValue) {
+    if (Object.keys(this.args).includes(arg)) {
+      return this.args[arg]
+    }
+    return defaultValue
+  }
+
   /**
     The currency displayed in the input
     @argument currency
     @type String?
   */
   get currency() {
-    return this.args.currency ?? 'EUR'
+    return this.argOrDefault('currency', 'EUR')
   }
 
   /**
@@ -45,7 +52,7 @@ export default class AmountInput extends Component {
   */
 
   get numberOfDecimal() {
-    return this.args.numberOfDecimal ?? 2
+    return this.argOrDefault('numberOfDecimal', 2)
   }
 
   /**
@@ -54,7 +61,7 @@ export default class AmountInput extends Component {
     @type String?
   */
   get placeholder() {
-    return this.args.placeholder ?? '0.00'
+    return this.argOrDefault('placeholder', '0.00')
   }
 
   /**
@@ -73,7 +80,7 @@ export default class AmountInput extends Component {
     @type Number?
   */
   get step() {
-    return this.args.step ?? 0.01
+    return this.argOrDefault('step', 0.01)
   }
 
   /**
