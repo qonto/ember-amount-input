@@ -39,6 +39,43 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.dom('input').hasAttribute('placeholder', '1.000.000')
   })
 
+  test('defaults are not used if named property declared even if undefined', async function(assert) {
+    await render(hbs`
+      <AmountInput
+        @currency={{this.isUndefined}}
+        @numberOfDecimal={{this.isUndefined}}
+        @placeholder={{this.isUndefined}}
+        @step={{this.isUndefined}}
+        @value={{this.value}}
+        @update={{fn (mut this.value)}} />
+    `)
+    assert.dom('.amount-input__currency').hasText('')
+    assert.dom('input').hasNoAttribute('placeholder')
+
+    // test numberOfDecimal
+    await fillIn('input', '10.726')
+    await blur('input')
+
+    assert.dom('input').hasValue('11')
+  })
+
+  test('defaults are used if named property not declared', async function(assert) {
+    await render(hbs`
+      <AmountInput
+        @value={{this.value}}
+        @update={{fn (mut this.value)}} />
+    `)
+
+    assert.dom('.amount-input__currency').hasText('EUR')
+    assert.dom('input').hasAttribute('placeholder', '0.00')
+
+    // test numberOfDecimal
+    await fillIn('input', '10.726')
+    await blur('input')
+
+    assert.dom('input').hasValue('10.73')
+  })
+
   test('e, . and , key should be masked when numberOfDecimal={{0}}', async function(assert) {
     this.set('value', 1)
 
