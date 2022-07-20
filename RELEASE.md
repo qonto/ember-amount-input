@@ -1,12 +1,11 @@
 # RELEASE
 
 Here are the steps:
-1. Run these commands
-```bash
-- yarn lerna-changelog --from=previous-tag >> CHANGELOG.md (manual cleanup)
-- git commit -m "Update CHANGELOG for the release"
-- yarn version
-- git push origin master the-new-tag
-- npm publish
+1. Run release-it
+```sh
+yarn release
 ```
-2. Draft a release: https://github.com/qonto/ember-amount-input/releases/new
+2. Deploy docs if have been updated
+```sh
+yarn ember deploy production
+```

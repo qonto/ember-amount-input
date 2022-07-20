@@ -6,7 +6,7 @@ ember-amount-input
 
 Easily create a money input with the currency of your liking.
 
-[View the docs here](https://qonto.github.io/ember-amount-input/versions/master).
+[View the docs here](https://qonto.github.io/ember-amount-input/).
 
 
 License
