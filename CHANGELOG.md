@@ -1,4 +1,16 @@
 
+
+## v4.1.0 (2022-08-19)
+
+#### :rocket: Enhancement
+* [#375](https://github.com/qonto/ember-amount-input/pull/375) Add named argument `@inputId` to allow setting the input id ([@mrloop](https://github.com/mrloop))
+
+#### :memo: Documentation
+* [#371](https://github.com/qonto/ember-amount-input/pull/371) Update release instructions and link to docs ([@mrloop](https://github.com/mrloop))
+
+#### Committers: 1
+- Ewan McDougall ([@mrloop](https://github.com/mrloop))
+
 ## v4.0.0 (2022-07-18)
 
 #### :boom: Breaking Change
