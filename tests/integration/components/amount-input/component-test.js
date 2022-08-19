@@ -20,6 +20,7 @@ module('Integration | Component | amount-input', function(hooks) {
 
     await render(hbs`
       <AmountInput
+        @inputId='abcd'
         @currency="USD"
         @numberOfDecimal={{0}}
         @placeholder="1.000.000"
@@ -30,6 +31,7 @@ module('Integration | Component | amount-input', function(hooks) {
 
     assert.dom('.amount-input__currency').hasText('USD')
     assert.dom('input').hasValue('1')
+    assert.dom('input').hasAttribute('id', 'abcd')
 
     await fillIn('input', '10.726')
     await blur('input')
@@ -46,11 +48,13 @@ module('Integration | Component | amount-input', function(hooks) {
         @numberOfDecimal={{this.isUndefined}}
         @placeholder={{this.isUndefined}}
         @step={{this.isUndefined}}
+        @inputId={{this.isUndefined}}
         @value={{this.value}}
         @update={{fn (mut this.value)}} />
     `)
     assert.dom('.amount-input__currency').hasText('')
     assert.dom('input').hasNoAttribute('placeholder')
+    assert.dom('input').hasNoAttribute('id')
 
     // test numberOfDecimal
     await fillIn('input', '10.726')
@@ -68,6 +72,7 @@ module('Integration | Component | amount-input', function(hooks) {
 
     assert.dom('.amount-input__currency').hasText('EUR')
     assert.dom('input').hasAttribute('placeholder', '0.00')
+    assert.dom('input').hasAttribute('id', 'amount-input')
 
     // test numberOfDecimal
     await fillIn('input', '10.726')

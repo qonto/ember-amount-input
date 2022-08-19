@@ -5,7 +5,7 @@
 
   <input
     class="amount-input__value {{@inputClass}} {{if @disabled 'disabled'}}"
-    id='amount-input'
+    id={{this.inputId}}
     type='number'
     value={{@value}}
     step={{this.step}}

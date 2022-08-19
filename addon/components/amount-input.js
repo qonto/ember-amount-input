@@ -45,6 +45,15 @@ export default class AmountInput extends Component {
   */
 
   /**
+    A custom id applied on the input
+    @argument inputId
+    @type String?
+  */
+  get inputId() {
+    return this.argOrDefault('inputId', 'amount-input')
+  }
+
+  /**
     Defines the argument sent to toFixed()
     Can be n>=0
     @argument numberOfDecimal
