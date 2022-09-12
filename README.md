@@ -1,3 +1,6 @@
+![ember-amount-input-illustration](https://user-images.githubusercontent.com/15218861/189690446-b3f1189f-94b0-464a-8875-2b065160ba14.svg)
+
+
 ember-amount-input
 ==============================================================================
 
