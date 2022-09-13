@@ -1,5 +1,20 @@
 
 
+
+## v5.0.0 (2022-09-13)
+
+#### :boom: Breaking Change
+* [#379](https://github.com/qonto/ember-amount-input/pull/379) Update LTS support only support ember 3.24 or above ([@mrloop](https://github.com/mrloop))
+
+#### :bug: Bug Fix
+* [#383](https://github.com/qonto/ember-amount-input/pull/383) Add ember-cli-addon-docs dependency so does not error ([@mrloop](https://github.com/mrloop))
+
+#### :memo: Documentation
+* [#383](https://github.com/qonto/ember-amount-input/pull/383) Add ember-cli-addon-docs dependency so does not error ([@mrloop](https://github.com/mrloop))
+
+#### Committers: 1
+- Ewan McDougall ([@mrloop](https://github.com/mrloop))
+
 ## v4.1.0 (2022-08-19)
 
 #### :rocket: Enhancement
