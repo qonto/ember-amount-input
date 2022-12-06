@@ -1,12 +1,12 @@
 import Component from '@glimmer/component'
 import { action } from '@ember/object'
 
-const KEY_CODE_E = 69
-const KEY_CODE_FULLSTOP = 190
-const KEY_CODE_COMMA = 188
+const KEY_CODE_E = 'e'
+const KEY_CODE_FULLSTOP = '.'
+const KEY_CODE_COMMA = ','
 
 /**
-  A amount/money input component. Usage:
+  A amount/money input component. ssage:
 
   ```hbs
     <AmountInput @value={{this.value}} @update={{fn (mut this.value)}}/>
@@ -103,11 +103,12 @@ export default class AmountInput extends Component {
 
   @action
   onKeyDown(event) {
-    if (event.keyCode === KEY_CODE_E) {
+    const keyPressToVerify = event.key.toLowerCase()
+    if (keyPressToVerify === KEY_CODE_E) {
       return false
     } else if (
       this.numberOfDecimal === 0 &&
-      [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(event.keyCode)
+      [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(keyPressToVerify)
     ) {
       return false
     }
