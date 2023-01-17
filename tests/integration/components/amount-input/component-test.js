@@ -81,6 +81,18 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.dom('input').hasValue('10.73')
   })
 
+  test('Should not type in when readonly attribute is true', async function(assert) {
+    await render(hbs`
+      <AmountInput
+        @value={{this.value}}
+        @update={{fn (mut this.value)}} 
+        @readonly={{true}} />
+    `)
+
+    // test type in
+    assert.rejects(fillIn('input', '10.726'))
+  })
+
   test('e, . and , key should be masked when numberOfDecimal={{0}}', async function(assert) {
     this.set('value', 1)
 

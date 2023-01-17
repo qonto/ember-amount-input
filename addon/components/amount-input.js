@@ -39,6 +39,12 @@ export default class AmountInput extends Component {
   */
 
   /**
+    Set readonly the input
+    @argument readonly
+    @type Boolean?
+  */
+
+  /**
     A custom class applied on the input
     @argument inputClass
     @type String?

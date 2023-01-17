@@ -24,6 +24,18 @@
   <demo.snippet @name="amount-input-disabled"/>
 </DocsDemo>
 
+<h2>Readonly</h2>
+
+<DocsDemo as |demo|>
+  <demo.example @name="amount-input-readonly">
+    <AmountInput
+      @value={{924.67}}
+      @readonly={{true}}
+    />
+  </demo.example>
+  <demo.snippet @name="amount-input-readonly"/>
+</DocsDemo>
+
 <h2>Advanced</h2>
 
 <DocsDemo as |demo|>
