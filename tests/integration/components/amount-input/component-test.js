@@ -93,6 +93,19 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.rejects(fillIn('input', '10.726'))
   })
 
+  test('should call update with the formatted value on blur if the value is 0', async function(assert) {
+    await render(hbs`
+    <AmountInput
+    @numberOfDecimal={{1}}
+    @value={{this.value}}
+    @update={{fn (mut this.value)}} />
+    `)
+
+    await fillIn('input', '0')
+    await blur('input')
+    assert.dom('input').hasValue('0.0')
+  })
+
   test('e, . and , key should be masked when numberOfDecimal={{0}}', async function(assert) {
     this.set('value', 1)
 

@@ -128,8 +128,8 @@ export default class AmountInput extends Component {
 
   @action
   onFocusOut(e) {
-    var { valueAsNumber } = e.target
-    if (valueAsNumber) {
+    var { valueAsNumber, value } = e.target
+    if (value) {
       // add decimals
       this.args.update?.(valueAsNumber.toFixed(this.numberOfDecimal))
     }
