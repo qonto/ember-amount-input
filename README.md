@@ -1,15 +1,34 @@
-![ember-amount-input-illustration](https://user-images.githubusercontent.com/15218861/189690446-b3f1189f-94b0-464a-8875-2b065160ba14.svg)
-
-
 ember-amount-input
 ==============================================================================
 
-[![Build Status](https://img.shields.io/travis/qonto/ember-phone-input.svg?style=flat-square)](https://travis-ci.com/qonto/ember-amount-input)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-amount-input.svg)](https://emberobserver.com/addons/ember-amount-input)
+[Short description of the addon.]
 
-Easily create a money input with the currency of your liking.
 
-[View the docs here](https://qonto.github.io/ember-amount-input/).
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.28 or above
+* Embroider or ember-auto-import v2
+
+
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install ember-amount-input
+```
+
+
+Usage
+------------------------------------------------------------------------------
+
+[Longer description of how to use the addon in apps.]
+
+
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
 License

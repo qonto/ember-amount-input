@@ -3,22 +3,22 @@ name: CI
 on:
   push:
     branches:
+      - main
       - master
-      - 'v*'
   pull_request: {}
 
 concurrency:
-  group: ci-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
+   group: ci-${{ github.head_ref || github.ref }}
+   cancel-in-progress: true
 
 jobs:
   test:
     name: "Tests"
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v3
+      
       - name: Install Node
         uses: actions/setup-node@v3
         with:
@@ -29,15 +29,15 @@ jobs:
       - name: Lint
         run: yarn lint
       - name: Run Tests
-        run: yarn test:ember
+        run: yarn test
 
   floating:
     name: "Floating Dependencies"
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v3
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 14.x
@@ -45,20 +45,19 @@ jobs:
       - name: Install Dependencies
         run: yarn install --no-lockfile
       - name: Run Tests
-        run: yarn test:ember
+        run: yarn test
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
-    needs: "test"
-    timeout-minutes: 10
+    needs: 'test'
 
     strategy:
       fail-fast: false
       matrix:
         try-scenario:
-          - ember-lts-3.24
           - ember-lts-3.28
+          - ember-lts-4.4
           - ember-release
           - ember-beta
           - ember-canary
@@ -68,6 +67,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      
       - name: Install Node
         uses: actions/setup-node@v3
         with:
@@ -77,3 +77,4 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        working-directory: test-app
