@@ -80,6 +80,18 @@ export default class AmountInput extends Component {
   }
 
   /**
+    The min attribute specifies the minimum value for the amount <input> element.
+    @argument min
+    @type Number
+  */
+
+  /**
+    The max attribute specifies the maximum value for the amount <input> element.
+    @argument max
+    @type Number
+  */
+
+  /**
     The input's value.
     Should be updated using the `update()` argument
     @argument value
