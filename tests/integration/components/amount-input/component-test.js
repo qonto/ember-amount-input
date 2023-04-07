@@ -26,6 +26,8 @@ module('Integration | Component | amount-input', function(hooks) {
         @placeholder="1.000.000"
         @step={{1}}
         @value={{this.value}}
+        @min={{5}}
+        @max={{10}}
         @update={{fn (mut this.value)}} />
     `)
 
@@ -39,6 +41,8 @@ module('Integration | Component | amount-input', function(hooks) {
     assert.dom('input').hasValue('11')
 
     assert.dom('input').hasAttribute('placeholder', '1.000.000')
+    assert.dom('input').hasAttribute('min', '5')
+    assert.dom('input').hasAttribute('max', '10')
   })
 
   test('defaults are not used if named property declared even if undefined', async function(assert) {
