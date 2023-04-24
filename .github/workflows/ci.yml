@@ -3,8 +3,8 @@ name: CI
 on:
   push:
     branches:
-      - main
       - master
+      - 'v*'
   pull_request: {}
 
 concurrency:
@@ -22,14 +22,15 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
       - name: Run Tests
-        run: yarn test
+        run: yarn test:ember
+        working-directory: test-app
 
   floating:
     name: "Floating Dependencies"
@@ -40,12 +41,13 @@ jobs:
       
       - uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
           cache: yarn
       - name: Install Dependencies
         run: yarn install --no-lockfile
       - name: Run Tests
-        run: yarn test
+        run: yarn test:ember
+        working-directory: test-app
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
@@ -71,7 +73,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
