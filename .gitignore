@@ -19,7 +19,7 @@ node_modules/
 /testem.log
 /yarn-error.log
 /.DS_Store
-# /.yarn/*
+/.yarn/*
 
 # ember-try
 /.node_modules.ember-try/
