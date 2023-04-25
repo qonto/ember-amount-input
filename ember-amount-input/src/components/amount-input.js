@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import './amount-input.css';
 
 const KEY_CODE_E = 69;
 const KEY_CODE_FULLSTOP = 190;
