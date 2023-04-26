@@ -1,7 +1,7 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/"
+  directory: "/test-app"
   schedule:
     interval: monthly
     time: "04:00"
@@ -9,21 +9,13 @@ updates:
   labels:
   - dependencies
   versioning-strategy: increase
-  ignore:
-  - dependency-name: ember-template-lint
-    versions:
-    - 2.18.0
-  - dependency-name: eslint
-    versions:
-    - 7.16.0
-    - 7.19.0
-  - dependency-name: ember-source
-    versions:
-    - 3.24.0
-    - 3.24.1
-  - dependency-name: ember-cli
-    versions:
-    - 3.24.0
-  - dependency-name: eslint-plugin-ember
-    versions:
-    - 10.1.1
+
+- package-ecosystem: npm
+  directory: "/ember-amount-input"
+  schedule:
+    interval: monthly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  labels:
+  - dependencies
+  versioning-strategy: increase
