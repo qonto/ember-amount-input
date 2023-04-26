@@ -1,3 +1,30 @@
+## v6.0.0 (2023-04-26)
+
+#### :boom: Breaking Change
+
+- [#431](https://github.com/qonto/ember-amount-input/pull/431) Remove support for Node v14 ([@alexis-falaise](https://github.com/alexis-falaise))
+
+#### :rocket: Enhancement
+
+- [#409](https://github.com/qonto/ember-amount-input/pull/409) Added readonly attribute ([@gianlucatomasino](https://github.com/gianlucatomasino))
+
+- [#429](https://github.com/qonto/ember-amount-input/pull/429) Expose min and max attributes ([@rasha-essam](https://github.com/rasha-essam))
+
+- [#431](https://github.com/qonto/ember-amount-input/pull/431) Convert to v2 addon ([@alexis-falaise](https://github.com/alexis-falaise))
+
+#### :bug: Bug Fix
+
+- [#410](https://github.com/qonto/ember-amount-input/pull/410) use already parsed e.target.valueAsNumber value instead of e.target.value ([@poulet42](https://github.com/poulet42))
+
+- [#418](https://github.com/qonto/ember-amount-input/pull/418) fix issue where 0 would not trigger an update call on blur ([@poulet42](https://github.com/poulet42))
+
+#### Committers: 3
+
+- Corentin ([@poulet42](https://github.com/poulet42))
+- Gianluca Tomasino ([@gianlucatomasino](https://github.com/gianlucatomasino))
+- Rasha Essam ([@rasha-essam](https://github.com/rasha-essam))
+- Alexis Falaise ([@alexis-falaise](https://github.com/alexis-falaise))
+
 ## v5.0.0 (2022-09-13)
 
 #### :boom: Breaking Change
