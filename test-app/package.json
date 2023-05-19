@@ -76,7 +76,7 @@
     "qunit-dom": "^2.0.0",
     "release-it": "^14.12.4",
     "release-it-lerna-changelog": "^4.0.1",
-    "stylelint": "^15.4.0",
+    "stylelint": "^15.6.0",
     "stylelint-config-standard": "^32.0.0",
     "stylelint-prettier": "^3.0.0",
     "tracked-built-ins": "^3.1.1",
