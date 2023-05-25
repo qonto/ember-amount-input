@@ -3,9 +3,9 @@
 Here are the steps:
 1. Run release-it
 ```sh
-yarn release
+pnpm release
 ```
 2. Deploy docs if have been updated
 ```sh
-yarn ember deploy production
+pnpm ember deploy production
 ```
