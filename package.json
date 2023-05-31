@@ -9,28 +9,23 @@
   "license": "MIT",
   "author": "",
   "scripts": {
-    "build": "yarn workspace ember-amount-input run build",
-    "lint": "yarn workspaces run lint",
-    "lint:fix": "yarn workspaces run lint:fix",
-    "prepare": "yarn build",
-    "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
-    "start:addon": "yarn workspace ember-amount-input run start",
-    "start:test-app": "yarn workspace test-app run start",
-    "test": "yarn workspaces run test"
+    "build": "pnpm --filter ember-amount-input build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
+    "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
+    "start:addon": "pnpm --filter ember-amount-input start",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
     "concurrently": "^7.2.1",
     "prettier": "^2.5.1"
   },
-  "workspaces": [
-    "ember-amount-input",
-    "test-app"
-  ],
   "engines": {
     "node": "16.* || >= 18"
   },
   "volta": {
-    "node": "18.15.0",
-    "yarn": "1.22.19"
+    "node": "18.15.0"
   }
 }

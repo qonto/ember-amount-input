@@ -2,6 +2,7 @@
 
 # compiled output
 dist/
+.pnpm-store/
 
 # dependencies
 node_modules/
@@ -20,6 +21,8 @@ node_modules/
 /yarn-error.log
 /.DS_Store
 /.yarn/*
+package-lock.json
+yarn.lock
 
 # ember-try
 /.node_modules.ember-try/

@@ -1,0 +1,3 @@
+packages:
+  - "ember-amount-input"
+  - "test-app"
