@@ -16,7 +16,6 @@ jobs:
       - name: Install pnpm
         uses: NullVoxPopuli/action-setup-pnpm@v2
         with:
-          pnpm-version: 8.5.1
           node-version: 16
           node-registry-url: "https://registry.npmjs.org"
       - name: Build addon
