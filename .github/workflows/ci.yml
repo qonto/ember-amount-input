@@ -22,7 +22,6 @@ jobs:
       - name: Install pnpm
         uses: NullVoxPopuli/action-setup-pnpm@v2
         with:
-          pnpm-version: 8.5.1
           node-version: 16.x
           args: '--frozen-lockfile'
       - name: Lint
@@ -41,7 +40,6 @@ jobs:
       - name: Install pnpm
         uses: NullVoxPopuli/action-setup-pnpm@v2
         with:
-          pnpm-version: 8.5.1
           node-version: 16.x
           no-lockfile: true
       - name: Run tests
@@ -74,7 +72,6 @@ jobs:
       - name: Install pnpm
         uses: NullVoxPopuli/action-setup-pnpm@v2
         with:
-          pnpm-version: 8.5.1
           node-version: 16.x
           args: '--frozen-lockfile'
       - name: Run tests
