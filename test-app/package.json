@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "private": true,
   "description": "Test app for ember-amount-input addon",
   "repository": "",

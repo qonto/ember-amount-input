@@ -1,3 +1,21 @@
+## v6.0.2 (2023-07-13)
+
+#### :rocket: Enhancement
+
+- [#512](https://github.com/qonto/ember-amount-input/pull/512) Prevent event propagation on invalid key presses ([@nicolasgasco](https://github.com/nicolasgasco))
+
+#### :house: Internal
+
+- [#513](https://github.com/qonto/ember-amount-input/pull/513) Auto update lock file with dependabot PRs ([@poulet42](https://github.com/poulet42))
+- [#493](https://github.com/qonto/ember-amount-input/pull/493) Use packageManager to set pnpm version ([@poulet42](https://github.com/poulet42))
+- [#492](https://github.com/qonto/ember-amount-input/pull/492) Remove double pnpm installation on CI ([@poulet42](https://github.com/poulet42))
+- [#491](https://github.com/qonto/ember-amount-input/pull/491) Remove double node installation on CI ([@poulet42](https://github.com/poulet42))
+
+#### Committers: 2
+
+- Corentin ([@poulet42](https://github.com/poulet42))
+- Nicolas Gasco ([@nicolasgasco](https://github.com/nicolasgasco))
+
 ## v6.0.1 (2023-06-02)
 
 #### :house: Internal
