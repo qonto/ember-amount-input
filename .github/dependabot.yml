@@ -1,20 +1,9 @@
 version: 2
 updates:
 - package-ecosystem: npm
-  directory: "/test-app"
+  directory: "/"
   schedule:
-    interval: monthly
-    time: "04:00"
-  open-pull-requests-limit: 10
-  labels:
-  - dependencies
-  versioning-strategy: increase
-
-- package-ecosystem: npm
-  directory: "/ember-amount-input"
-  schedule:
-    interval: monthly
-    time: "04:00"
+    interval: weekly
   open-pull-requests-limit: 10
   labels:
   - dependencies
