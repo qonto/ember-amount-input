@@ -123,11 +123,13 @@ export default class AmountInput extends Component {
   @action
   onKeyDown(event) {
     if (event.keyCode === KEY_CODE_E) {
+      event.preventDefault();
       return false;
     } else if (
       this.numberOfDecimal === 0 &&
       [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(event.keyCode)
     ) {
+      event.preventDefault();
       return false;
     }
   }
