@@ -1,16 +1,17 @@
+{{! @glint-nocheck: not typesafe yet }}
 <DocsViewer as |viewer|>
 
   <viewer.nav as |nav|>
-    <nav.section @label="Getting started"/>
-    <nav.item @label="Installation" @route="docs.installation" />
+    <nav.section @label='Getting started' />
+    <nav.item @label='Installation' @route='docs.installation' />
 
-    <nav.section @label="Components usage"/>
-    <nav.item @label="amount input" @route="docs.components.amount-input" />
+    <nav.section @label='Components usage' />
+    <nav.item @label='amount input' @route='docs.components.amount-input' />
   </viewer.nav>
 
   <viewer.main>
-    <div class="docs-container">
-      <div class="docs-section">
+    <div class='docs-container'>
+      <div class='docs-section'>
         {{outlet}}
       </div>
     </div>
