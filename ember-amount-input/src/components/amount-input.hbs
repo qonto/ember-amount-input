@@ -1,10 +1,12 @@
+{{! @glint-nocheck: not typesafe yet }}
+
 <div class='amount-input' ...attributes>
-  <span class="amount-input__currency {{if @value 'black'}}">
+  <span class='amount-input__currency {{if @value "black"}}'>
     {{this.currency}}
   </span>
 
   <input
-    class="amount-input__value {{@inputClass}} {{if @disabled 'disabled'}}"
+    class='amount-input__value {{@inputClass}} {{if @disabled "disabled"}}'
     id={{this.inputId}}
     type='number'
     value={{@value}}
