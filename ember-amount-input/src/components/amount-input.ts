@@ -23,13 +23,6 @@ export interface AmountInputArgs {
   @public
 */
 export default class AmountInput extends Component<AmountInputArgs> {
-  argOrDefault(arg: any, defaultValue: any) {
-    if (Object.keys(this.args).includes(arg)) {
-      return this.args[arg as keyof typeof this.args];
-    }
-    return defaultValue;
-  }
-
   /**
     The currency displayed in the input
     @argument currency
@@ -127,7 +120,8 @@ export default class AmountInput extends Component<AmountInputArgs> {
   */
 
   @action
-  onKeyDown(event: any) {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
+  onKeyDown(event: any): any {
     if (event.keyCode === KEY_CODE_E) {
       event.preventDefault();
       return false;
@@ -141,18 +135,28 @@ export default class AmountInput extends Component<AmountInputArgs> {
   }
 
   @action
-  onInput(e: any) {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
+  onInput(e: any): any {
     var { value } = e.target;
     this.args.update?.(value);
     return true;
   }
 
   @action
-  onFocusOut(e: any) {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
+  onFocusOut(e: any): any {
     var { valueAsNumber, value } = e.target;
     if (value) {
       // add decimals
       this.args.update?.(valueAsNumber.toFixed(this.numberOfDecimal));
     }
+  }
+
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
+  argOrDefault(arg: any, defaultValue: any): any {
+    if (Object.keys(this.args).includes(arg)) {
+      return this.args[arg as keyof typeof this.args];
+    }
+    return defaultValue;
   }
 }
