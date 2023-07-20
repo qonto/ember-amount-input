@@ -6,6 +6,12 @@ const KEY_CODE_E = 69;
 const KEY_CODE_FULLSTOP = 190;
 const KEY_CODE_COMMA = 188;
 
+export interface AmountInputArgs {
+  disabled: boolean;
+  readonly: boolean;
+  update: (value: number) => void;
+}
+
 /**
   A amount/money input component. Usage:
 
@@ -16,10 +22,10 @@ const KEY_CODE_COMMA = 188;
   @class AmountInput
   @public
 */
-export default class AmountInput extends Component {
-  argOrDefault(arg, defaultValue) {
+export default class AmountInput extends Component<AmountInputArgs> {
+  argOrDefault(arg: any, defaultValue: any) {
     if (Object.keys(this.args).includes(arg)) {
-      return this.args[arg];
+      return this.args[arg as keyof typeof this.args];
     }
     return defaultValue;
   }
@@ -29,7 +35,7 @@ export default class AmountInput extends Component {
     @argument currency
     @type String?
   */
-  get currency() {
+  get currency(): string {
     return this.argOrDefault('currency', 'EUR');
   }
 
@@ -56,7 +62,7 @@ export default class AmountInput extends Component {
     @argument inputId
     @type String?
   */
-  get inputId() {
+  get inputId(): string {
     return this.argOrDefault('inputId', 'amount-input');
   }
 
@@ -67,7 +73,7 @@ export default class AmountInput extends Component {
     @type Number?
   */
 
-  get numberOfDecimal() {
+  get numberOfDecimal(): number {
     return this.argOrDefault('numberOfDecimal', 2);
   }
 
@@ -76,7 +82,7 @@ export default class AmountInput extends Component {
     @argument placeholder
     @type String?
   */
-  get placeholder() {
+  get placeholder(): string {
     return this.argOrDefault('placeholder', '0.00');
   }
 
@@ -107,7 +113,7 @@ export default class AmountInput extends Component {
     @argument step
     @type Number?
   */
-  get step() {
+  get step(): number {
     return this.argOrDefault('step', 0.01);
   }
 
@@ -121,7 +127,7 @@ export default class AmountInput extends Component {
   */
 
   @action
-  onKeyDown(event) {
+  onKeyDown(event: any) {
     if (event.keyCode === KEY_CODE_E) {
       event.preventDefault();
       return false;
@@ -135,14 +141,14 @@ export default class AmountInput extends Component {
   }
 
   @action
-  onInput(e) {
+  onInput(e: any) {
     var { value } = e.target;
     this.args.update?.(value);
     return true;
   }
 
   @action
-  onFocusOut(e) {
+  onFocusOut(e: any) {
     var { valueAsNumber, value } = e.target;
     if (value) {
       // add decimals
