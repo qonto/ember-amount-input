@@ -7,9 +7,23 @@ const KEY_CODE_FULLSTOP = 190;
 const KEY_CODE_COMMA = 188;
 
 export interface AmountInputArgs {
-  disabled: boolean;
-  readonly: boolean;
-  update: (value: number) => void;
+  currency?: string;
+  disabled?: boolean;
+  inputClass?: string;
+  inputId?: string;
+  min: number;
+  max: number;
+  numberOfDecimal?: number;
+  placeholder?: string;
+  readonly?: boolean;
+  step?: number;
+  update: (value: number | string) => void;
+  value: number;
+}
+
+export interface AmountInputSignature {
+  Element: HTMLDivElement;
+  Args: AmountInputArgs;
 }
 
 /**
@@ -22,7 +36,7 @@ export interface AmountInputArgs {
   @class AmountInput
   @public
 */
-export default class AmountInput extends Component<AmountInputArgs> {
+export default class AmountInput extends Component<AmountInputSignature> {
   /**
     The currency displayed in the input
     @argument currency
@@ -120,8 +134,7 @@ export default class AmountInput extends Component<AmountInputArgs> {
   */
 
   @action
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
-  onKeyDown(event: any): any {
+  onKeyDown(event: KeyboardEvent): boolean {
     if (event.keyCode === KEY_CODE_E) {
       event.preventDefault();
       return false;
@@ -132,30 +145,36 @@ export default class AmountInput extends Component<AmountInputArgs> {
       event.preventDefault();
       return false;
     }
-  }
 
-  @action
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
-  onInput(e: any): any {
-    var { value } = e.target;
-    this.args.update?.(value);
     return true;
   }
 
   @action
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
-  onFocusOut(e: any): any {
-    var { valueAsNumber, value } = e.target;
-    if (value) {
-      // add decimals
-      this.args.update?.(valueAsNumber.toFixed(this.numberOfDecimal));
-    }
+  onInput(event: Event): boolean {
+    if (!(event.target instanceof HTMLInputElement)) return false;
+
+    var { value } = event.target;
+    this.args.update(value);
+    return true;
   }
 
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-explicit-any
-  argOrDefault(arg: any, defaultValue: any): any {
+  @action
+  onFocusOut(event: Event): boolean {
+    if (event.target instanceof HTMLInputElement) {
+      var { valueAsNumber, value } = event.target;
+      if (value) {
+        // Add decimals
+        this.args.update(valueAsNumber.toFixed(this.numberOfDecimal));
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  argOrDefault<K extends keyof AmountInputArgs, T>(arg: K, defaultValue: T): T {
     if (Object.keys(this.args).includes(arg)) {
-      return this.args[arg as keyof typeof this.args];
+      return this.args[arg] as T;
     }
     return defaultValue;
   }
