@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.4",
-    "@glimmer/component": "^1.1.2"
+    "@glimmer/component": "^1.1.2",
+    "@babel/runtime": "^7.22.6"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
