@@ -6,7 +6,7 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | amount-input', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('Input should be of type number', async function (assert) {
+  test('should be of type number', async function (assert) {
     await render(hbs`
       <AmountInput/>
     `);
@@ -15,7 +15,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasAttribute('type', 'number');
   });
 
-  test('Arguments work properly', async function (assert) {
+  test('should allow passing arguments', async function (assert) {
     this.set('value', 1);
 
     await render(hbs`
@@ -45,7 +45,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasAttribute('max', '10');
   });
 
-  test('defaults are not used if named property declared even if undefined', async function (assert) {
+  test('should use named property declared (even if undefined) instead of defaults', async function (assert) {
     await render(hbs`
       <AmountInput
         @currency={{this.isUndefined}}
@@ -67,7 +67,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('11');
   });
 
-  test('defaults are used if named property not declared', async function (assert) {
+  test('should use defaults if named property are not declared', async function (assert) {
     await render(hbs`
       <AmountInput
         @value={{this.value}}
@@ -85,7 +85,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('10.73');
   });
 
-  test('Should not type in when readonly attribute is true', async function (assert) {
+  test('should not type in when readonly attribute is set to true', async function (assert) {
     await render(hbs`
       <AmountInput
         @value={{this.value}}
@@ -110,7 +110,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('0.0');
   });
 
-  test('e, . and , key should be masked when numberOfDecimal={{0}}', async function (assert) {
+  test('should mask `e`, `.` and `,` keys when numberOfDecimal is set to 0', async function (assert) {
     this.set('value', 1);
 
     await render(hbs`
