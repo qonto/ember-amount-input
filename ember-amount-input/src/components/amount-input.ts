@@ -7,17 +7,64 @@ const KEY_CODE_FULLSTOP = 190;
 const KEY_CODE_COMMA = 188;
 
 export interface AmountInputArgs {
+  /**
+   * The currency displayed in the input
+   */
   currency?: string;
+
+  /**
+   * Disables the input
+   */
   disabled?: boolean;
+
+  /**
+   * A custom class applied on the input
+   */
   inputClass?: string;
+
+  /**
+   * A custom id applied on the input
+   */
   inputId?: string;
+
+  /**
+   * Specifies the minimum value for the input field
+   */
   min: number;
+
+  /**
+   * Specifies the maximum value for the input field
+   */
   max: number;
+
+  /**
+   * Specifies the number of decimals to use for the amount value
+   */
   numberOfDecimal?: number;
+
+  /**
+   * The placeholder displayed in the input
+   */
   placeholder?: string;
+
+  /**
+   * Specifies if the input field should be read-only
+   */
   readonly?: boolean;
+
+  /**
+   * Specifies the number intervals for the input field
+   */
   step?: number;
+
+  /**
+   * The callback function triggered when the input value is updated
+   */
   update: (value: number | string) => void;
+
+  /**
+   * The value of the input. It should be updated using the `update` argument
+   */
   value: number;
 }
 
@@ -27,111 +74,59 @@ export interface AmountInputSignature {
 }
 
 /**
-  A amount/money input component. Usage:
-
-  ```hbs
-    <AmountInput @value={{this.value}} @update={{fn (mut this.value)}}/>
-  ```
-
-  @class AmountInput
-  @public
-*/
+ * An amount/money input component.
+ *
+ * @public
+ * @class AmountInput
+ *
+ * @example
+ *
+ * ```hbs
+ *  <AmountInput @value={{this.value}} @update={{fn (mut this.value)}}/>
+ * ```
+ */
 export default class AmountInput extends Component<AmountInputSignature> {
   /**
-    The currency displayed in the input
-    @argument currency
-    @type String?
-  */
+   * The currency displayed in the input.
+   * Defaults to `EUR`.
+   */
   get currency(): string {
     return this.argOrDefault('currency', 'EUR');
   }
 
   /**
-    Disable the input
-    @argument disabled
-    @type Boolean?
-  */
-
-  /**
-    Set readonly the input
-    @argument readonly
-    @type Boolean?
-  */
-
-  /**
-    A custom class applied on the input
-    @argument inputClass
-    @type String?
-  */
-
-  /**
-    A custom id applied on the input
-    @argument inputId
-    @type String?
-  */
+   * A custom id applied on the input.
+   * Defaults to `amount-input`.
+   */
   get inputId(): string {
     return this.argOrDefault('inputId', 'amount-input');
   }
 
   /**
-    Defines the argument sent to toFixed()
-    Can be n>=0
-    @argument numberOfDecimal
-    @type Number?
-  */
-
+   * Specifies the number of decimals to use for the amount value.
+   * Can be >= 0.
+   * Defaults to 2.
+   */
   get numberOfDecimal(): number {
     return this.argOrDefault('numberOfDecimal', 2);
   }
 
   /**
-    The placeholder
-    @argument placeholder
-    @type String?
-  */
+   * The placeholder displayed in the input.
+   * Defaults to `0.00`.
+   */
   get placeholder(): string {
     return this.argOrDefault('placeholder', '0.00');
   }
 
   /**
-    The min attribute specifies the minimum value for the amount <input> element.
-    @argument min
-    @type Number
-  */
-
-  /**
-    The max attribute specifies the maximum value for the amount <input> element.
-    @argument max
-    @type Number
-  */
-
-  /**
-    The input's value.
-    Should be updated using the `update()` argument
-    @argument value
-    @type Number
-    @required
-  */
-
-  /**
-    Specifies the number intervals for the input field
-    Some browser also use it to validate the value if it used in a form
-    Can be n>=0
-    @argument step
-    @type Number?
-  */
+   * Specifies the number intervals for the input field.
+   * Can be >= 0.
+   * Defaults to 0.01.
+   */
   get step(): number {
     return this.argOrDefault('step', 0.01);
   }
-
-  /**
-    Function triggered when onInput and onFocusOut with the new value
-    Use it to update your value
-    @argument update
-    @type function
-    @param Number value
-    @required
-  */
 
   @action
   onKeyDown(event: KeyboardEvent): boolean {
@@ -172,6 +167,10 @@ export default class AmountInput extends Component<AmountInputSignature> {
     return false;
   }
 
+  /**
+   * Retrieves the value of a specific property from the "args" object,
+   * or returns a default value if the property is not found.
+   */
   argOrDefault<K extends keyof AmountInputArgs, T>(arg: K, defaultValue: T): T {
     if (Object.keys(this.args).includes(arg)) {
       return this.args[arg] as T;
