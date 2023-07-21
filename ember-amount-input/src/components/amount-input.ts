@@ -148,15 +148,16 @@ export default class AmountInput extends Component<AmountInputSignature> {
   onInput(event: Event): boolean {
     if (!(event.target instanceof HTMLInputElement)) return false;
 
-    var { value } = event.target;
+    const { value } = event.target;
     this.args.update(value);
+
     return true;
   }
 
   @action
   onFocusOut(event: Event): boolean {
     if (event.target instanceof HTMLInputElement) {
-      var { valueAsNumber, value } = event.target;
+      const { valueAsNumber, value } = event.target;
       if (value) {
         // Add decimals
         this.args.update(valueAsNumber.toFixed(this.numberOfDecimal));
@@ -175,6 +176,7 @@ export default class AmountInput extends Component<AmountInputSignature> {
     if (Object.keys(this.args).includes(arg)) {
       return this.args[arg] as T;
     }
+
     return defaultValue;
   }
 }
