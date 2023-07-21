@@ -6,6 +6,8 @@
     // layout, which is not resolvable with the Node resolution algorithm, to
     // work with TypeScript.
     "baseUrl": ".",
+    // Type checkonly the code specifically refered to in the source code.
+    "skipLibCheck": true,
     "paths": {
       "test-app/tests/*": [
         "tests/*"
