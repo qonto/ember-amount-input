@@ -47,7 +47,7 @@
     "eslint-plugin-ember": "^11.6.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.2",
     "rollup": "^3.22.0",
     "rollup-plugin-copy": "^3.4.0"
   },
