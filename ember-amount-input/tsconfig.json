@@ -8,7 +8,7 @@
     "environment": "ember-loose"
   },
   "compilerOptions": {
-    // Type checkonly the code specifically refered to in the source code.
+    // Type check only the code specifically refered to in the source code.
     "skipLibCheck": true,
   }
 }
