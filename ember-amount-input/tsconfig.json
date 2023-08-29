@@ -8,6 +8,7 @@
     "environment": "ember-loose"
   },
   "compilerOptions": {
+    "declarationDir": "declarations",
     // Type check only the code specifically refered to in the source code.
     "skipLibCheck": true,
   }
