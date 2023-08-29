@@ -180,10 +180,3 @@ export default class AmountInput extends Component<AmountInputSignature> {
     return defaultValue;
   }
 }
-
-declare module '@glint/environment-ember-loose/registry' {
-  export default interface Registry {
-    AmountInput: typeof AmountInput;
-    'amount-input': typeof AmountInput;
-  }
-}
