@@ -42,6 +42,9 @@ importers:
       '@rollup/plugin-babel':
         specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.17.0)(rollup@3.22.0)
+      '@tsconfig/ember':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.5.0
         version: 6.5.0(@typescript-eslint/parser@6.5.0)(eslint@8.40.0)(typescript@5.2.2)
@@ -78,6 +81,9 @@ importers:
       rollup-plugin-copy:
         specifier: ^3.4.0
         version: 3.4.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
 
   test-app:
     dependencies:
@@ -2707,6 +2713,10 @@ packages:
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
+    dev: true
+
+  /@tsconfig/ember@3.0.0:
+    resolution: {integrity: sha512-KF9F9f4i+8LE31OKS014n5uEDt1mB/6ZvyQz/Mam28nAKDTSMBlOWHgTOj0TY8l4BfbEE+BgUuWCSoUHhb2BMw==}
     dev: true
 
   /@types/acorn@4.0.6:
