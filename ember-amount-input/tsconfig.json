@@ -4,6 +4,9 @@
     "src/**/*",
     "unpublished-development-types/**/*",
   ],
+  "glint": {
+    "environment": "ember-loose"
+  },
   "compilerOptions": {
     "allowJs": true,
     "declarationDir": "declarations",
