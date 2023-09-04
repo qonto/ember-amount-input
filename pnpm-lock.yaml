@@ -127,6 +127,9 @@ importers:
       '@glimmer/tracking':
         specifier: ^1.1.2
         version: 1.1.2
+      '@tsconfig/ember':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.5.0
         version: 6.5.0(@typescript-eslint/parser@6.5.0)(eslint@8.40.0)(typescript@5.2.2)
@@ -184,6 +187,9 @@ importers:
       ember-cli-terser:
         specifier: ^4.0.2
         version: 4.0.2
+      ember-cli-typescript:
+        specifier: 5.2.1
+        version: 5.2.1
       ember-cli-uglify:
         specifier: ^3.0.0
         version: 3.0.0
@@ -274,6 +280,9 @@ importers:
       tracked-built-ins:
         specifier: ^3.1.1
         version: 3.1.1
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
       webpack:
         specifier: ^5.81.0
         version: 5.81.0
@@ -471,7 +480,7 @@ packages:
       '@babel/core': 7.17.0
       '@babel/helper-annotate-as-pure': 7.18.6
       regexpu-core: 5.3.2
-      semver: 6.3.0
+      semver: 6.3.1
 
   /@babel/helper-define-polyfill-provider@0.3.3(@babel/core@7.17.0):
     resolution: {integrity: sha512-z5aQKU4IzbqCC1XH0nAqfsFLMVSo22SBKUc0BxGrLkolTdPTructy0ToNnlO2zA4j9Q/7pjMZf0DSY+DSTYzww==}
@@ -483,8 +492,8 @@ packages:
       '@babel/helper-plugin-utils': 7.21.5
       debug: 4.3.4
       lodash.debounce: 4.0.8
-      resolve: 1.22.2
-      semver: 6.3.0
+      resolve: 1.22.3
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -7818,7 +7827,7 @@ packages:
     engines: {node: '>=0.8'}
     dependencies:
       errlop: 2.2.0
-      semver: 6.3.0
+      semver: 6.3.1
     dev: true
 
   /ee-first@1.1.1:
@@ -8507,9 +8516,9 @@ packages:
       debug: 4.3.4
       execa: 4.1.0
       fs-extra: 9.1.0
-      resolve: 1.22.2
+      resolve: 1.22.3
       rsvp: 4.8.5
-      semver: 7.5.1
+      semver: 7.5.4
       stagehand: 1.0.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
@@ -13968,7 +13977,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.3
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -16127,7 +16136,6 @@ packages:
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
-    dev: true
 
   /semver@7.5.0:
     resolution: {integrity: sha512-+XC0AD/R7Q2mPSRuy2Id0+CGTZ98+8f+KvwirxOKIEyid+XSx6HbC63p+O4IndTHuX5Z+JxQ0TghCkO5Cg/2HA==}
