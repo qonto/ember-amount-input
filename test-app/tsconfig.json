@@ -24,4 +24,10 @@
     "tests/**/*",
     "types/**/*"
   ],
+  "glint": {
+    "environment": "ember-loose",
+    "transform": {
+      "include": ["app/**", "tests/**"]
+    }
+  }
 }
