@@ -20,10 +20,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install pnpm
-        uses: NullVoxPopuli/action-setup-pnpm@v2
+        uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 16.x
-          args: '--frozen-lockfile'
+          args: "--frozen-lockfile"
       - name: Lint
         run: pnpm lint
       - name: Run tests
@@ -38,10 +38,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install pnpm
-        uses: NullVoxPopuli/action-setup-pnpm@v2
+        uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 16.x
-          no-lockfile: true
+          args: "--no-lockfile"
       - name: Run tests
         run: pnpm test:ember
         working-directory: test-app
@@ -70,10 +70,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install pnpm
-        uses: NullVoxPopuli/action-setup-pnpm@v2
+        uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: 16.x
-          args: '--frozen-lockfile'
+          args: "--frozen-lockfile"
       - name: Run tests
         run: pnpm ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
         working-directory: test-app
