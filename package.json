@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.1",
-    "prettier": "^2.5.1"
+    "prettier": "^3.0.3"
   },
   "engines": {
     "node": "16.* || >= 18"
