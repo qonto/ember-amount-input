@@ -14,17 +14,23 @@
   "author": "",
   "files": [
     "addon-main.cjs",
+    "declarations",
     "dist"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "concurrently 'pnpm:build:*'",
+    "build:js": "rollup --config",
+    "build:types": "glint --declaration",
     "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
     "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
     "lint:hbs": "ember-template-lint . --no-error-on-unmatched-pattern",
     "lint:js": "eslint . --cache",
+    "lint:types": "glint",
     "lint:hbs:fix": "ember-template-lint . --fix --no-error-on-unmatched-pattern",
     "lint:js:fix": "eslint . --fix",
-    "start": "rollup --config --watch",
+    "start": "concurrently 'pnpm:start:*'",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:types": "glint -d --watch",
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'",
     "prepack": "rollup --config",
     "prepare": "rollup --config"
@@ -34,12 +40,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
-    "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.21.0",
     "@babel/plugin-syntax-decorators": "^7.17.0",
+    "@babel/preset-typescript": "^7.22.11",
     "@embroider/addon-dev": "^3.0.0",
+    "@glimmer/component": "^1.1.2",
+    "@glint/core": "^1.1.0",
+    "@glint/environment-ember-loose": "^1.1.0",
+    "@glint/template": "^1.1.0",
     "@rollup/plugin-babel": "^6.0.3",
+    "@tsconfig/ember": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
     "concurrently": "^8.0.1",
     "ember-template-lint": "^5.7.3",
     "eslint": "^8.40.0",
@@ -49,7 +62,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8",
     "rollup": "^3.22.0",
-    "rollup-plugin-copy": "^3.4.0"
+    "rollup-plugin-copy": "^3.4.0",
+    "typescript": "^5.2.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -66,9 +80,22 @@
     }
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
+    ".": {
+      "types": "./declarations/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./declarations/*.d.ts",
+      "default": "./dist/*.js"
+    },
     "./addon-main.js": "./addon-main.cjs"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "declarations/*"
+      ]
+    }
   },
   "peerDependencies": {
     "ember-source": "^4.0.0"

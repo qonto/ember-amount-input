@@ -7,6 +7,9 @@ const addon = new Addon({
   destDir: 'dist',
 });
 
+// Add extensions here, such as ts, gjs, etc that you may import
+const extensions = ['.js', '.ts'];
+
 export default {
   // This provides defaults that work well alongside `publicEntrypoints` below.
   // You can augment this if you need to.
@@ -15,7 +18,7 @@ export default {
   plugins: [
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.
-    addon.publicEntrypoints(['index.js', '**/*.js']),
+    addon.publicEntrypoints(['components/**/*.js']),
 
     // These are the modules that should get reexported into the traditional
     // "app" tree. Things in here should also be in publicEntrypoints above, but
@@ -30,10 +33,9 @@ export default {
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
     // template colocation.
-    //
-    // By default, this will load the actual babel config from the file
-    // babel.config.json.
+    // See `babel.config.json` for the actual Babel configuration!
     babel({
+      extensions,
       babelHelpers: 'bundled',
     }),
 
