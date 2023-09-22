@@ -19,7 +19,7 @@
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
-    "concurrently": "^7.2.1",
+    "concurrently": "^8.2.1",
     "prettier": "^2.5.1"
   },
   "engines": {
