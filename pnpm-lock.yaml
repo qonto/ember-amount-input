@@ -132,7 +132,7 @@ importers:
         version: 1.1.0(typescript@5.2.2)
       '@glint/environment-ember-loose':
         specifier: 1.1.0
-        version: 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.2.0)(ember-modifier@4.1.0)
+        version: 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@glint/template':
         specifier: 1.1.0
         version: 1.1.0
@@ -188,8 +188,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       ember-cli-htmlbars:
-        specifier: ^6.2.0
-        version: 6.2.0
+        specifier: ^6.3.0
+        version: 6.3.0
       ember-cli-inject-live-reload:
         specifier: ^2.1.0
         version: 2.1.0
@@ -2965,7 +2965,7 @@ packages:
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-destroyable-polyfill: 2.0.3(@babel/core@7.21.8)
       ember-source: 4.12.0(@babel/core@7.21.8)(@glimmer/component@1.1.2)(@glint/template@1.1.0)(webpack@5.88.2)
     transitivePeerDependencies:
@@ -3186,7 +3186,7 @@ packages:
         optional: true
     dependencies:
       '@embroider/macros': 1.11.0(@glint/template@1.1.0)
-      '@glint/environment-ember-loose': 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.2.0)(ember-modifier@4.1.0)
+      '@glint/environment-ember-loose': 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@glint/template': 1.1.0
       broccoli-funnel: 3.0.8
       ember-cli-babel: 7.26.11
@@ -3427,7 +3427,7 @@ packages:
       '@glint/template': 1.1.0
     dev: true
 
-  /@glint/environment-ember-loose@1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.2.0)(ember-modifier@4.1.0):
+  /@glint/environment-ember-loose@1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0):
     resolution: {integrity: sha512-Qwr3OAptRZ8zqxaPvpVBdbSiiImYMRNu+0IPQGaDutqOV80GzWYeiMuEyPC0Nwy4mQ3991YxE24Q+a5/FTfTNw==}
     peerDependencies:
       '@glimmer/component': ^1.1.2
@@ -3457,7 +3457,7 @@ packages:
     dependencies:
       '@glimmer/component': 1.1.2(@babel/core@7.21.8)
       '@glint/template': 1.1.0
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-modifier: 4.1.0(ember-source@4.12.0)
     dev: true
 
@@ -8853,7 +8853,7 @@ packages:
       ember-cli-autoprefixer: 2.0.0
       ember-cli-babel: 7.26.11
       ember-cli-clipboard: 0.16.0(@babel/core@7.21.8)(@glint/template@1.1.0)(ember-source@4.12.0)
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-cli-postcss: 8.2.0
       ember-cli-string-helpers: 6.1.0
       ember-cli-string-utils: 1.1.0
@@ -9139,8 +9139,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-cli-htmlbars@6.2.0:
-    resolution: {integrity: sha512-j5EGixjGau23HrqRiW/JjoAovg5UBHfjbyN7wX5ekE90knIEqUUj1z/Mo/cTx/J2VepQ2lE6HdXW9LWQ/WdMtw==}
+  /ember-cli-htmlbars@6.3.0:
+    resolution: {integrity: sha512-N9Y80oZfcfWLsqickMfRd9YByVcTGyhYRnYQ2XVPVrp6jyUyOeRWmEAPh7ERSXpp8Ws4hr/JB9QVQrn/yZa+Ag==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@ember/edition-utils': 1.2.0
@@ -9154,7 +9154,7 @@ packages:
       hash-for-dep: 1.5.1
       heimdalljs-logger: 0.1.10
       js-string-escape: 1.0.1
-      semver: 7.5.1
+      semver: 7.5.4
       silent-error: 1.1.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
@@ -9774,7 +9774,7 @@ packages:
       '@embroider/macros': 1.11.0(@glint/template@1.1.0)
       '@embroider/util': 1.11.0(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-source@4.12.0)
       ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 6.2.0
+      ember-cli-htmlbars: 6.3.0
       ember-cli-version-checker: 2.2.0
       ember-decorators: 6.1.1
       ember-tether: 2.0.1
