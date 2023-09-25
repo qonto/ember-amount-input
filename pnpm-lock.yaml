@@ -170,8 +170,8 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1(ember-source@4.12.0)
       ember-cli-babel:
-        specifier: ^7.26.11
-        version: 7.26.11
+        specifier: ^8.0.0
+        version: 8.0.0(@babel/core@7.23.0)
       ember-cli-dependency-checker:
         specifier: ^3.3.2
         version: 3.3.2(ember-cli@4.12.1)
@@ -1517,7 +1517,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -4368,7 +4367,7 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.23.0
-      semver: 5.7.1
+      semver: 5.7.2
 
   /babel-plugin-ember-data-packages-polyfill@0.1.2:
     resolution: {integrity: sha512-kTHnOwoOXfPXi00Z8yAgyD64+jdSXk3pknnS7NlqnCKAU6YDkXZ4Y7irl66kaZjZn0FBBt0P4YOZFZk85jYOww==}
@@ -4428,6 +4427,17 @@ packages:
     dependencies:
       find-babel-config: 1.2.0
       glob: 7.2.3
+      pkg-up: 3.1.0
+      reselect: 4.1.8
+      resolve: 1.22.3
+    dev: true
+
+  /babel-plugin-module-resolver@5.0.0:
+    resolution: {integrity: sha512-g0u+/ChLSJ5+PzYwLwP8Rp8Rcfowz58TJNCe+L/ui4rpzE/mg//JVX0EWBUYoxaextqnwuGHzfGp2hh0PPV25Q==}
+    engines: {node: '>= 16'}
+    dependencies:
+      find-babel-config: 2.0.0
+      glob: 8.1.0
       pkg-up: 3.1.0
       reselect: 4.1.8
       resolve: 1.22.3
@@ -4742,7 +4752,7 @@ packages:
       babel-plugin-transform-regenerator: 6.26.0
       browserslist: 3.2.8
       invariant: 2.2.4
-      semver: 5.7.1
+      semver: 5.7.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5122,6 +5132,25 @@ packages:
       workerpool: 3.1.2
     transitivePeerDependencies:
       - supports-color
+
+  /broccoli-babel-transpiler@8.0.0(@babel/core@7.23.0):
+    resolution: {integrity: sha512-3HEp3flvasUKJGWERcrPgM1SWvHJ0O/fmbEtY9L4kDyMSnqjY6hTYvNvgWCIgbwXAYAUlZP0vjAQsmyLNGLwFw==}
+    engines: {node: 16.* || >= 18}
+    peerDependencies:
+      '@babel/core': ^7.17.9
+    dependencies:
+      '@babel/core': 7.23.0
+      broccoli-persistent-filter: 3.1.3
+      clone: 2.1.2
+      hash-for-dep: 1.5.1
+      heimdalljs: 0.2.6
+      heimdalljs-logger: 0.1.10
+      json-stable-stringify: 1.0.2
+      rsvp: 4.8.5
+      workerpool: 6.4.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /broccoli-bridge@1.0.0:
     resolution: {integrity: sha512-WvU6T6AJrtpFSScgyCVEFAajPAJTOYYIIpGvs/PbkSq9OUBvI3/IEUHg+Ipx376M/clGFwa7K9crEtpauqC66A==}
@@ -6904,7 +6933,7 @@ packages:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
-      semver: 5.7.1
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
     dev: true
@@ -7909,6 +7938,43 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  /ember-cli-babel@8.0.0(@babel/core@7.23.0):
+    resolution: {integrity: sha512-nf8BFgm6jy+B5tKeovHtcErfTZwzItsB6pJfTJGGR6tg74KLWtLFB5u/zB9S6c8ww1QacMltsffFz2iedCDBPw==}
+    engines: {node: 16.* || 18.* || >= 20}
+    peerDependencies:
+      '@babel/core': ^7.12.0
+    dependencies:
+      '@babel/core': 7.23.0
+      '@babel/helper-compilation-targets': 7.22.15
+      '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.23.0)
+      '@babel/plugin-proposal-decorators': 7.23.0(@babel/core@7.23.0)
+      '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.23.0)
+      '@babel/plugin-proposal-private-property-in-object': 7.21.11(@babel/core@7.23.0)
+      '@babel/plugin-transform-modules-amd': 7.23.0(@babel/core@7.23.0)
+      '@babel/plugin-transform-runtime': 7.22.15(@babel/core@7.23.0)
+      '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.0)
+      '@babel/preset-env': 7.22.20(@babel/core@7.23.0)
+      '@babel/runtime': 7.12.18
+      amd-name-resolver: 1.3.1
+      babel-plugin-debug-macros: 0.3.4(@babel/core@7.23.0)
+      babel-plugin-ember-data-packages-polyfill: 0.1.2
+      babel-plugin-ember-modules-api-polyfill: 3.5.0
+      babel-plugin-module-resolver: 5.0.0
+      broccoli-babel-transpiler: 8.0.0(@babel/core@7.23.0)
+      broccoli-debug: 0.6.5
+      broccoli-funnel: 3.0.8
+      broccoli-source: 3.0.1
+      calculate-cache-key-for-tree: 2.0.0
+      clone: 2.1.2
+      ember-cli-babel-plugin-helpers: 1.1.1
+      ember-cli-version-checker: 5.1.2
+      ensure-posix-path: 1.1.1
+      resolve-package-path: 4.0.3
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /ember-cli-clipboard@0.16.0(@babel/core@7.23.0)(@glint/template@1.1.0)(ember-source@4.12.0):
     resolution: {integrity: sha512-l9iDVjcJLkbgpdbJe+bN29q2ibZmEpEV6bXstIG9q4HPvaqbXw0PbSFhaNeQWpJKNkd5dFKSNdgEfli6heJSFw==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -8268,7 +8334,7 @@ packages:
     engines: {node: '>= 4'}
     dependencies:
       resolve: 1.22.3
-      semver: 5.7.1
+      semver: 5.7.2
     dev: true
 
   /ember-cli-version-checker@3.1.3:
@@ -9933,6 +9999,14 @@ packages:
     dependencies:
       json5: 0.5.1
       path-exists: 3.0.0
+
+  /find-babel-config@2.0.0:
+    resolution: {integrity: sha512-dOKT7jvF3hGzlW60Gc3ONox/0rRZ/tz7WCil0bqA1In/3I8f1BctpXahRnEKDySZqci7u+dqq93sZST9fOJpFw==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      json5: 2.2.3
+      path-exists: 4.0.0
+    dev: true
 
   /find-cache-dir@2.1.0:
     resolution: {integrity: sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==}
@@ -14999,7 +15073,6 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
-    dev: true
 
   /regenerator-transform@0.10.1:
     resolution: {integrity: sha512-PJepbvDbuK1xgIgnau7Y90cwaAmO/LCLMI2mPvaXq2heGMR3aWW5/BQvYrhJ8jgmQjXewXvBjzfqKcVOmhjZ6Q==}
@@ -15012,7 +15085,7 @@ packages:
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
     dependencies:
-      '@babel/runtime': 7.12.18
+      '@babel/runtime': 7.23.1
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
@@ -15694,7 +15767,6 @@ packages:
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
-    dev: true
 
   /semver@6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
