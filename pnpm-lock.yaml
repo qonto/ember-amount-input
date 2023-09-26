@@ -118,6 +118,9 @@ importers:
       '@ember/test-helpers':
         specifier: ^2.9.3
         version: 2.9.3(@babel/core@7.23.0)(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-source@5.3.0)
+      '@embroider/macros':
+        specifier: 1.13.0
+        version: 1.13.0(@glint/template@1.1.0)
       '@embroider/test-setup':
         specifier: 3.0.1
         version: 3.0.1
@@ -158,8 +161,8 @@ importers:
         specifier: ^2.6.3
         version: 2.6.3(@glint/template@1.1.0)(webpack@5.88.2)
       ember-cli:
-        specifier: ~4.12.1
-        version: 4.12.1
+        specifier: ~4.12.2
+        version: 4.12.2
       ember-cli-addon-docs:
         specifier: ^5.0.0
         version: 5.0.0(@babel/core@7.23.0)(@ember/test-helpers@2.9.3)(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-data@4.12.0)(ember-fetch@8.1.2)(ember-source@5.3.0)(webpack@5.88.2)
@@ -174,7 +177,7 @@ importers:
         version: 8.0.0(@babel/core@7.23.0)
       ember-cli-dependency-checker:
         specifier: ^3.3.2
-        version: 3.3.2(ember-cli@4.12.1)
+        version: 3.3.2(ember-cli@4.12.2)
       ember-cli-deploy:
         specifier: ^2.0.0
         version: 2.0.0
@@ -224,8 +227,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0
       ember-qunit:
-        specifier: ^6.2.0
-        version: 6.2.0(@ember/test-helpers@2.9.3)(@glint/template@1.1.0)(ember-source@5.3.0)(qunit@2.20.0)(webpack@5.88.2)
+        specifier: ^8.0.1
+        version: 8.0.1(@ember/test-helpers@2.9.3)(@glint/template@1.1.0)(ember-source@5.3.0)(qunit@2.20.0)
       ember-resolver:
         specifier: ^11.0.1
         version: 11.0.1(ember-source@5.3.0)
@@ -1620,7 +1623,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember-data/store': 4.12.0(@babel/core@7.23.0)(@ember-data/graph@4.12.0)(@ember-data/json-api@4.12.0)(@ember-data/legacy-compat@4.12.0)(@ember-data/model@4.12.0)(@ember-data/tracking@4.12.0)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(@glint/template@1.1.0)(ember-source@5.3.0)
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
@@ -1638,7 +1641,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-auto-import: 2.6.3(@glint/template@1.1.0)(webpack@5.88.2)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
@@ -1656,7 +1659,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember-data/store': 4.12.0(@babel/core@7.23.0)(@ember-data/graph@4.12.0)(@ember-data/json-api@4.12.0)(@ember-data/legacy-compat@4.12.0)(@ember-data/model@4.12.0)(@ember-data/tracking@4.12.0)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(@glint/template@1.1.0)(ember-source@5.3.0)
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1674,7 +1677,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember-data/store': 4.12.0(@babel/core@7.23.0)(@ember-data/graph@4.12.0)(@ember-data/json-api@4.12.0)(@ember-data/legacy-compat@4.12.0)(@ember-data/model@4.12.0)(@ember-data/tracking@4.12.0)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(@glint/template@1.1.0)(ember-source@5.3.0)
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1696,7 +1699,7 @@ packages:
       '@ember-data/graph': 4.12.0(@ember-data/store@4.12.0)(@glint/template@1.1.0)
       '@ember-data/json-api': 4.12.0(@ember-data/graph@4.12.0)(@ember-data/store@4.12.0)(@glint/template@1.1.0)
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1732,7 +1735,7 @@ packages:
       '@ember-data/tracking': 4.12.0
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cached-decorator-polyfill: 1.0.1(@babel/core@7.23.0)(@glint/template@1.1.0)(ember-source@5.3.0)
       ember-cli-babel: 7.26.11
       ember-cli-string-utils: 1.1.0
@@ -1754,7 +1757,7 @@ packages:
       '@babel/plugin-transform-block-scoping': 7.23.0(@babel/core@7.23.0)
       '@babel/runtime': 7.23.1
       '@ember/edition-utils': 1.2.0
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       babel-import-util: 1.3.0
       babel-plugin-debug-macros: 0.3.4(@babel/core@7.23.0)
       babel-plugin-filter-imports: 4.0.0
@@ -1786,7 +1789,7 @@ packages:
     dependencies:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember/test-waiters': 3.0.2
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
     transitivePeerDependencies:
       - '@glint/template'
@@ -1807,7 +1810,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember-data/store': 4.12.0(@babel/core@7.23.0)(@ember-data/graph@4.12.0)(@ember-data/json-api@4.12.0)(@ember-data/legacy-compat@4.12.0)(@ember-data/model@4.12.0)(@ember-data/tracking@4.12.0)(@ember/string@3.1.1)(@glimmer/tracking@1.1.2)(@glint/template@1.1.0)(ember-source@5.3.0)
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
       ember-cli-test-info: 1.0.0
       ember-inflector: 4.0.2
@@ -1844,7 +1847,7 @@ packages:
       '@ember-data/private-build-infra': 4.12.0(@glint/template@1.1.0)
       '@ember-data/tracking': 4.12.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@glimmer/tracking': 1.1.2
       ember-cached-decorator-polyfill: 1.0.1(@babel/core@7.23.0)(@glint/template@1.1.0)(ember-source@5.3.0)
       ember-cli-babel: 7.26.11
@@ -1916,7 +1919,7 @@ packages:
     peerDependencies:
       ember-source: ^3.8 || ^4.0.0
     dependencies:
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       ember-cli-babel: 7.26.11
       ember-modifier-manager-polyfill: 1.2.0(@babel/core@7.23.0)
       ember-source: 5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(@glint/template@1.1.0)(rsvp@4.8.5)(webpack@5.88.2)
@@ -1942,7 +1945,7 @@ packages:
       ember-source: '>=3.8.0'
     dependencies:
       '@ember/test-waiters': 3.0.2
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@embroider/util': 1.11.0(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-source@5.3.0)
       broccoli-debug: 0.6.5
       broccoli-funnel: 3.0.8
@@ -2057,8 +2060,8 @@ packages:
       - supports-color
     dev: true
 
-  /@embroider/macros@1.11.0(@glint/template@1.1.0):
-    resolution: {integrity: sha512-P/WSB+PqKSja5qXjYvhLyUM0ivcDoI9kkqs+R0GNujfVhS0EIIAMHfD9uHDBbhzFit39pT0QJqgcXGE2rprCPA==}
+  /@embroider/macros@1.13.0(@glint/template@1.1.0):
+    resolution: {integrity: sha512-V89lvlNPIjcvbuew+FLxcCcgdPO0cZrgHHmX6dHO3TpiweC5G6DN4/QogvdnSprPvWOMQS9u3bSFmR7DBkmSgg==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
       '@glint/template': ^1.0.0
@@ -2066,10 +2069,10 @@ packages:
       '@glint/template':
         optional: true
     dependencies:
-      '@embroider/shared-internals': 2.1.0
+      '@embroider/shared-internals': 2.3.0
       '@glint/template': 1.1.0
       assert-never: 1.2.1
-      babel-import-util: 1.3.0
+      babel-import-util: 2.0.0
       ember-cli-babel: 7.26.11
       find-up: 5.0.0
       lodash: 4.17.21
@@ -2077,6 +2080,28 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
+
+  /@embroider/macros@1.13.1(@glint/template@1.1.0):
+    resolution: {integrity: sha512-4htraP/rNIht8uCxXoc59Bw2EsBFfc4YUQD9XSpzJ4xUr1V0GQf9wL/noeSuYSxIhwRfZOErnJhsdyf1hH+I/A==}
+    engines: {node: 12.* || 14.* || >= 16}
+    peerDependencies:
+      '@glint/template': ^1.0.0
+    peerDependenciesMeta:
+      '@glint/template':
+        optional: true
+    dependencies:
+      '@embroider/shared-internals': 2.4.0
+      '@glint/template': 1.1.0
+      assert-never: 1.2.1
+      babel-import-util: 2.0.0
+      ember-cli-babel: 7.26.11
+      find-up: 5.0.0
+      lodash: 4.17.21
+      resolve: 1.22.3
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@embroider/shared-internals@1.8.3:
     resolution: {integrity: sha512-N5Gho6Qk8z5u+mxLCcMYAoQMbN4MmH+z2jXwQHVs859bxuZTxwF6kKtsybDAASCtd2YGxEmzcc1Ja/wM28824w==}
@@ -2118,6 +2143,22 @@ packages:
       resolve-package-path: 4.0.3
       semver: 7.5.4
       typescript-memoize: 1.1.1
+
+  /@embroider/shared-internals@2.3.0:
+    resolution: {integrity: sha512-5h7hUcci10ixXecJj/peqNQJO8kWe4b4tRx7mZjf7I6+P6zDcdVk3QxQZ+/gwrG6cbEfpLzEGKIEiLjZvPtqIA==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      babel-import-util: 2.0.0
+      debug: 4.3.4
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      resolve-package-path: 4.0.3
+      semver: 7.5.4
+      typescript-memoize: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
 
   /@embroider/shared-internals@2.4.0:
     resolution: {integrity: sha512-pFE05ebenWMC9XAPRjadYCXXb6VmqjkhYN5uqkhPo+VUmMHnx7sZYYxqGjxfVuhC/ghS/BNlOffOCXDOoE7k7g==}
@@ -2167,7 +2208,7 @@ packages:
       '@glint/template':
         optional: true
     dependencies:
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@glint/environment-ember-loose': 1.1.0(@glimmer/component@1.1.2)(@glint/template@1.1.0)(ember-cli-htmlbars@6.3.0)(ember-modifier@4.1.0)
       '@glint/template': 1.1.0
       broccoli-funnel: 3.0.8
@@ -6725,6 +6766,7 @@ packages:
   /consolidate@0.16.0(mustache@4.2.0):
     resolution: {integrity: sha512-Nhl1wzCslqXYTJVDyJCu3ODohy9OfBMB5uD2BiBTzd7w+QY0lBzafkR8y8755yMYHAaMD4NuzbAw03/xzfw+eQ==}
     engines: {node: '>= 0.10.0'}
+    deprecated: Please upgrade to consolidate v1.0.0+ as it has been modernized with several long-awaited fixes implemented. Maintenance is supported by Forward Email at https://forwardemail.net ; follow/watch https://github.com/ladjs/consolidate for updates and release changelog
     peerDependencies:
       arc-templates: ^0.5.3
       atpl: '>=0.7.6'
@@ -7816,7 +7858,7 @@ packages:
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.23.0)
       '@babel/plugin-proposal-decorators': 7.23.0(@babel/core@7.23.0)
       '@babel/preset-env': 7.22.20(@babel/core@7.23.0)
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@embroider/shared-internals': 2.1.0
       babel-loader: 8.3.0(@babel/core@7.23.0)(webpack@5.88.2)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
@@ -7867,7 +7909,7 @@ packages:
     peerDependencies:
       ember-source: ^3.13.0 || ^4.0.0
     dependencies:
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@glimmer/tracking': 1.1.2
       babel-import-util: 1.3.0
       ember-cache-primitive-polyfill: 1.0.1(@babel/core@7.23.0)
@@ -8125,14 +8167,14 @@ packages:
       - webpack-command
     dev: true
 
-  /ember-cli-dependency-checker@3.3.2(ember-cli@4.12.1):
+  /ember-cli-dependency-checker@3.3.2(ember-cli@4.12.2):
     resolution: {integrity: sha512-PwkrW5oYsdPWwt+0Tojufmv/hxVETTjkrEdK7ANQB2VSnqpA5UcYubwpQM9ONuR2J8wyNDMwEHlqIrk/FYtBsQ==}
     engines: {node: '>= 6'}
     peerDependencies:
       ember-cli: ^3.2.0 || >=4.0.0
     dependencies:
       chalk: 2.4.2
-      ember-cli: 4.12.1
+      ember-cli: 4.12.2
       find-yarn-workspace-root: 1.2.1
       is-git-url: 1.0.0
       resolve: 1.22.3
@@ -8357,8 +8399,8 @@ packages:
       ember-cli-string-utils: 1.1.0
     dev: true
 
-  /ember-cli-test-loader@3.0.0:
-    resolution: {integrity: sha512-wfFRBrfO9gaKScYcdQxTfklx9yp1lWK6zv1rZRpkas9z2SHyJojF7NOQRWQgSB3ypm7vfpiF8VsFFVVr7VBzAQ==}
+  /ember-cli-test-loader@3.1.0:
+    resolution: {integrity: sha512-0aocZV9SIoOHiU3hrH3IuLR6busWhTX6UVXgd490hmJkIymmOXNH2+jJoC7Ebkeo3PiOfAdjqhb765QDlHSJOw==}
     engines: {node: 10.* || >= 12}
     dependencies:
       ember-cli-babel: 7.26.11
@@ -8496,8 +8538,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /ember-cli@4.12.1:
-    resolution: {integrity: sha512-O4QqvbvyyAvIC5SlYNOOocEhX/co7wKOSEGf8M+ipU/zgzA5ElyKMAQly9wf1QJ/RbSD1j2cFVUBIdVH/OuJHg==}
+  /ember-cli@4.12.2:
+    resolution: {integrity: sha512-990UglceEsB3nd/pTI08wL+hbApICrd6P4BO88486rSf9r3XjZ7LBcD318N8I1AGe5IUDkbccMrOQxoHge6zNg==}
     engines: {node: '>= 14'}
     hasBin: true
     dependencies:
@@ -8577,11 +8619,11 @@ packages:
       promise.hash.helper: 1.0.8
       quick-temp: 0.1.8
       remove-types: 1.0.0
-      resolve: 1.22.2
+      resolve: 1.22.3
       resolve-package-path: 4.0.3
       safe-stable-stringify: 2.4.3
       sane: 5.0.1
-      semver: 7.5.1
+      semver: 7.5.4
       silent-error: 1.1.1
       sort-package-json: 1.57.0
       symlink-or-copy: 1.3.1
@@ -8729,7 +8771,7 @@ packages:
       '@ember-data/tracking': 4.12.0
       '@ember/edition-utils': 1.2.0
       '@ember/string': 3.1.1
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@glimmer/env': 0.1.7
       broccoli-merge-trees: 4.2.0
       ember-auto-import: 2.6.3(@glint/template@1.1.0)(webpack@5.88.2)
@@ -8844,7 +8886,7 @@ packages:
       ember-tether:
         optional: true
     dependencies:
-      '@embroider/macros': 1.11.0(@glint/template@1.1.0)
+      '@embroider/macros': 1.13.0(@glint/template@1.1.0)
       '@embroider/util': 1.11.0(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-source@5.3.0)
       ember-cli-babel: 7.26.11
       ember-cli-htmlbars: 6.3.0
@@ -8896,30 +8938,22 @@ packages:
       - supports-color
     dev: true
 
-  /ember-qunit@6.2.0(@ember/test-helpers@2.9.3)(@glint/template@1.1.0)(ember-source@5.3.0)(qunit@2.20.0)(webpack@5.88.2):
-    resolution: {integrity: sha512-mC+0bp8DwWzJLn8SW3GS8KDZIkl4yLsNYwMi5Dw6+aFllq7FM2crd/dfY4MuOIHK7GKdjtmWJTMGnjSpeSayaw==}
-    engines: {node: 14.* || 16.* || >= 18}
+  /ember-qunit@8.0.1(@ember/test-helpers@2.9.3)(@glint/template@1.1.0)(ember-source@5.3.0)(qunit@2.20.0):
+    resolution: {integrity: sha512-13PtywHNPTQKkDW4o8QRkJvcdsZr8hRyvh6xh/YLAX8+HaRLd3nPL8mBF4O/Kur/DAj3QWLvjzktZ2uRNGSh3A==}
     peerDependencies:
-      '@ember/test-helpers': ^2.9.3
-      ember-source: '>=3.28'
+      '@ember/test-helpers': '>=3.0.3'
+      ember-source: '>=4.0.0'
       qunit: ^2.13.0
     dependencies:
       '@ember/test-helpers': 2.9.3(@babel/core@7.23.0)(@glint/environment-ember-loose@1.1.0)(@glint/template@1.1.0)(ember-source@5.3.0)
-      broccoli-funnel: 3.0.8
-      broccoli-merge-trees: 3.0.2
-      common-tags: 1.8.2
-      ember-auto-import: 2.6.3(@glint/template@1.1.0)(webpack@5.88.2)
-      ember-cli-babel: 7.26.11
-      ember-cli-test-loader: 3.0.0
+      '@embroider/addon-shim': 1.8.6
+      '@embroider/macros': 1.13.1(@glint/template@1.1.0)
+      ember-cli-test-loader: 3.1.0
       ember-source: 5.3.0(@babel/core@7.23.0)(@glimmer/component@1.1.2)(@glint/template@1.1.0)(rsvp@4.8.5)(webpack@5.88.2)
       qunit: 2.20.0
-      resolve-package-path: 4.0.3
-      silent-error: 1.1.1
-      validate-peer-dependencies: 2.2.0
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
-      - webpack
     dev: true
 
   /ember-resolver@11.0.1(ember-source@5.3.0):
@@ -13867,6 +13901,7 @@ packages:
   /normalize-path@2.1.1:
     resolution: {integrity: sha512-3pKJwH184Xo/lnH6oyP1q2pMd7HcypqqmRs91/6/i2CGtWwIKGCkOOMTm/zXbgTEWHw1uNpNi/igc3ePOYHb6w==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       remove-trailing-separator: 1.1.0
     dev: true
@@ -15435,6 +15470,7 @@ packages:
 
   /remove-trailing-separator@1.1.0:
     resolution: {integrity: sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==}
+    requiresBuild: true
     dev: true
 
   /remove-types@1.0.0:
