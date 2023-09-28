@@ -44,7 +44,7 @@
     "@babel/plugin-proposal-decorators": "^7.23.0",
     "@babel/plugin-syntax-decorators": "^7.22.10",
     "@babel/preset-typescript": "^7.23.0",
-    "@embroider/addon-dev": "^3.0.0",
+    "@embroider/addon-dev": "^4.1.0",
     "@glimmer/component": "^1.1.2",
     "@glint/core": "^1.1.0",
     "@glint/environment-ember-loose": "^1.1.0",
