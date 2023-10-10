@@ -20,7 +20,7 @@ ember install ember-amount-input
 
 ## Usage
 
-[View the docs here](https://qonto.github.io/ember-amount-input/)
+See the [documentation](DOCS.md) for details.
 
 ## Contributing
 
