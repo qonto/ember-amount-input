@@ -1,29 +1,44 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { blur, fillIn, render, typeIn } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { hbs } from 'ember-cli-htmlbars';
+import type { TestContext as TestContextBase } from '@ember/test-helpers';
+
+interface TestContext extends TestContextBase {
+  value: number | string;
+  update: () => void;
+}
+
+const NOOP = (): void => {};
 
 module('Integration | Component | amount-input', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('is of type number', async function (assert) {
-    await render(hbs`
-      <AmountInput />
+  hooks.beforeEach(function (this: TestContext) {
+    this.update = NOOP;
+  });
+
+  test('is of type number', async function (this: TestContext, assert) {
+    await render<TestContext>(hbs`
+      <AmountInput
+        @value={{0}}
+        @update={{this.update}}
+      />
     `);
 
     assert.dom('.amount-input').exists;
     assert.dom('input').hasAttribute('type', 'number');
   });
 
-  test('allows passing arguments', async function (assert) {
-    this.set('value', 1);
+  test('allows passing arguments', async function (this: TestContext, assert) {
+    this.value = 1;
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <AmountInput
         @inputId='abcd'
-        @currency="USD"
+        @currency='USD'
         @numberOfDecimal={{0}}
-        @placeholder="1.000.000"
+        @placeholder='1.000.000'
         @step={{1}}
         @value={{this.value}}
         @min={{5}}
@@ -45,14 +60,14 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasAttribute('max', '10');
   });
 
-  test('uses named property declared (even if undefined) instead of defaults', async function (assert) {
-    await render(hbs`
+  test('uses named property declared (even if undefined) instead of defaults', async function (this: TestContext, assert) {
+    await render<TestContext>(hbs`
       <AmountInput
-        @currency={{this.isUndefined}}
-        @numberOfDecimal={{this.isUndefined}}
-        @placeholder={{this.isUndefined}}
-        @step={{this.isUndefined}}
-        @inputId={{this.isUndefined}}
+        @currency={{undefined}}
+        @numberOfDecimal={{undefined}}
+        @placeholder={{undefined}}
+        @step={{undefined}}
+        @inputId={{undefined}}
         @value={{this.value}}
         @update={{fn (mut this.value)}}
       />
@@ -68,8 +83,8 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('11');
   });
 
-  test('uses defaults if named property are not declared', async function (assert) {
-    await render(hbs`
+  test('uses defaults if named property are not declared', async function (this: TestContext, assert) {
+    await render<TestContext>(hbs`
       <AmountInput
         @value={{this.value}}
         @update={{fn (mut this.value)}}
@@ -86,8 +101,8 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('10.73');
   });
 
-  test('does not type in when readonly attribute is set to true', async function (assert) {
-    await render(hbs`
+  test('does not type in when readonly attribute is set to true', async function (this: TestContext, assert) {
+    await render<TestContext>(hbs`
       <AmountInput
         @value={{this.value}}
         @update={{fn (mut this.value)}} 
@@ -98,8 +113,8 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.rejects(fillIn('input', '10.726'));
   });
 
-  test('calls update with the formatted value on blur if the value is 0', async function (assert) {
-    await render(hbs`
+  test('calls update with the formatted value on blur if the value is 0', async function (this: TestContext, assert) {
+    await render<TestContext>(hbs`
       <AmountInput
         @numberOfDecimal={{1}}
         @value={{this.value}}
@@ -112,10 +127,10 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasValue('0.0');
   });
 
-  test('masks `e`, `.` and `,` keys when `numberOfDecimal` argument is set to 0', async function (assert) {
-    this.set('value', 1);
+  test('masks `e`, `.` and `,` keys when `numberOfDecimal` argument is set to 0', async function (this: TestContext, assert) {
+    this.value = 1;
 
-    await render(hbs`
+    await render<TestContext>(hbs`
       <AmountInput
         @numberOfDecimal={{0}}
         @value={{this.value}}
