@@ -7,10 +7,6 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['ember-amount-input'],
     },
-    'ember-cli-addon-docs': {
-      documentingAddonAt: '../ember-amount-input',
-      addonSrcFolder: 'app',
-    },
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');
