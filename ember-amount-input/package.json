@@ -62,7 +62,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.0.3",
-    "rollup": "^3.29.4",
+    "rollup": "^4.4.0",
     "rollup-plugin-copy": "^3.5.0",
     "typescript": "^5.2.2"
   },
