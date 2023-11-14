@@ -11,6 +11,7 @@ Easily create a money input with the currency of your liking.
 
 - Ember.js v3.28 or above
 - TypeScript v5.0 or above
+- Node.js v18 or above
 - Embroider or ember-auto-import v2
 
 ## Installation
