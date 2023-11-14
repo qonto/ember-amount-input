@@ -16,7 +16,7 @@ jobs:
       - name: Install pnpm
         uses: wyvox/action-setup-pnpm@v3
         with:
-          node-version: 16
+          node-version: 18.x
           node-registry-url: "https://registry.npmjs.org"
       - name: Build addon
         run: pnpm build
