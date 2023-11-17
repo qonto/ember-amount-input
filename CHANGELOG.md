@@ -1,3 +1,35 @@
+
+## v7.0.0-beta.0 (2023-11-17)
+
+#### :boom: Breaking Change
+* [#656](https://github.com/qonto/ember-amount-input/pull/656) feat: drop node v16 ([@vscav](https://github.com/vscav))
+
+#### :rocket: Enhancement
+* [#589](https://github.com/qonto/ember-amount-input/pull/589) refactor: migrate test-app package to TypeScript ([@vscav](https://github.com/vscav))
+* [#610](https://github.com/qonto/ember-amount-input/pull/610) refactor: migrate addon package to TypeScript ([@vscav](https://github.com/vscav))
+* [#587](https://github.com/qonto/ember-amount-input/pull/587) fix(peer-deps): explicitly set ember-source versions range ([@vscav](https://github.com/vscav))
+
+#### :memo: Documentation
+* [#647](https://github.com/qonto/ember-amount-input/pull/647) docs: add TypeScript usage section ([@vscav](https://github.com/vscav))
+* [#611](https://github.com/qonto/ember-amount-input/pull/611) chore: replace documentation application by markdown file ([@vscav](https://github.com/vscav))
+* [#585](https://github.com/qonto/ember-amount-input/pull/585) chore: replace Travis-CI build status badge with GitHub CI workflow badge ([@vscav](https://github.com/vscav))
+
+#### :house: Internal
+* [#658](https://github.com/qonto/ember-amount-input/pull/658) feat: setup `release-it` ([@vscav](https://github.com/vscav))
+* [#639](https://github.com/qonto/ember-amount-input/pull/639) chore(ember-cli-addon-docs): remove unused declarations from configuration files ([@vscav](https://github.com/vscav))
+* [#631](https://github.com/qonto/ember-amount-input/pull/631) chore: install and use @qonto/eslint-config-typescript@1.0.0-rc.0 ([@dannycalleri](https://github.com/dannycalleri))
+* [#614](https://github.com/qonto/ember-amount-input/pull/614) feat(ts-lint): allow use of private and protected syntax for classes in .ts files ([@vscav](https://github.com/vscav))
+* [#588](https://github.com/qonto/ember-amount-input/pull/588) ci: add LTS ember-try scenarios for v4.8.0 and v4.12.0 ([@vscav](https://github.com/vscav))
+* [#586](https://github.com/qonto/ember-amount-input/pull/586) refactor: rewrite test descriptions in component integration tests ([@vscav](https://github.com/vscav))
+* [#543](https://github.com/qonto/ember-amount-input/pull/543) feat: add TypeScript configuration ([@vscav](https://github.com/vscav))
+* [#547](https://github.com/qonto/ember-amount-input/pull/547) chore(ci): update action to setup pnpm in release script ([@vscav](https://github.com/vscav))
+* [#546](https://github.com/qonto/ember-amount-input/pull/546) chore(ci): update action to setup pnpm in CI script ([@vscav](https://github.com/vscav))
+
+#### Committers: 2
+- Danny Calleri ([@dannycalleri](https://github.com/dannycalleri))
+- Vincent Scavinner ([@vscav](https://github.com/vscav))
+
+
 ## v6.0.2 (2023-07-13)
 
 #### :rocket: Enhancement
