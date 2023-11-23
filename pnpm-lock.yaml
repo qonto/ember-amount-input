@@ -49,8 +49,8 @@ importers:
         specifier: ^7.23.3
         version: 7.23.3(@babel/core@7.23.3)
       '@embroider/addon-dev':
-        specifier: ^4.1.1
-        version: 4.1.1(@glint/template@1.2.1)(rollup@4.5.1)
+        specifier: ^4.1.2
+        version: 4.1.2(@glint/template@1.2.1)(rollup@4.5.1)
       '@glimmer/component':
         specifier: ^1.1.2
         version: 1.1.2(@babel/core@7.23.3)
@@ -1919,14 +1919,14 @@ packages:
       - supports-color
     dev: true
 
-  /@embroider/addon-dev@4.1.1(@glint/template@1.2.1)(rollup@4.5.1):
-    resolution: {integrity: sha512-6AIU+GobgsozQJZtG6ys/8TumtnJkrW8LKggjajCwX8QP++eAN9vUL00AZdgh5wZAyLAiv+jNi5knGrPdMFPMA==}
+  /@embroider/addon-dev@4.1.2(@glint/template@1.2.1)(rollup@4.5.1):
+    resolution: {integrity: sha512-yvL5Vmfh6oQ5m6qP83eZIkD6/RUtWIrW46gtAZvAPCm+HzjFTYHDlldzgYOxUa7k1g2mWrfJOtzBRqqBsogoSw==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
     dependencies:
-      '@embroider/core': 3.3.0(@glint/template@1.2.1)
+      '@embroider/core': 3.4.2(@glint/template@1.2.1)
       '@rollup/pluginutils': 4.2.1
-      content-tag: 1.1.0
+      content-tag: 1.1.2
       fs-extra: 10.1.0
       minimatch: 3.1.2
       rollup-plugin-copy-assets: 2.0.3(rollup@4.5.1)
@@ -1952,15 +1952,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@embroider/core@3.3.0(@glint/template@1.2.1):
-    resolution: {integrity: sha512-QkOLFB3DUuDg6DU7qNAKFNJUyzgmjWNiRLcyrhThYgWeN5h8ilatG3sl5atBN6Jh3wCIJmhjXagafkA82a0abQ==}
+  /@embroider/core@3.4.2(@glint/template@1.2.1):
+    resolution: {integrity: sha512-lHJcUosSgA8v9deZ2a3k/zuQCpu+Rjw1PZ4dOHzdoTN7B9J96IIybw1JVN234sdUJi9VWjpQnvE2uWOD9seRjg==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@babel/core': 7.23.3
       '@babel/parser': 7.23.3
       '@babel/traverse': 7.23.3
-      '@embroider/macros': 1.13.2(@glint/template@1.2.1)
-      '@embroider/shared-internals': 2.5.0
+      '@embroider/macros': 1.13.3(@glint/template@1.2.1)
+      '@embroider/shared-internals': 2.5.1
       assert-never: 1.2.1
       babel-plugin-ember-template-compilation: 2.2.0
       broccoli-node-api: 1.7.0
@@ -1988,28 +1988,6 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@embroider/macros@1.13.2(@glint/template@1.2.1):
-    resolution: {integrity: sha512-AUgJ71xG8kjuTx8XB1AQNBiebJuXRfhcHr318dCwnQz9VRXdYSnEEqf38XRvGYIoCvIyn/3c72LrSwzaJqknOA==}
-    engines: {node: 12.* || 14.* || >= 16}
-    peerDependencies:
-      '@glint/template': ^1.0.0
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
-    dependencies:
-      '@embroider/shared-internals': 2.5.0
-      '@glint/template': 1.2.1
-      assert-never: 1.2.1
-      babel-import-util: 2.0.0
-      ember-cli-babel: 7.26.11
-      find-up: 5.0.0
-      lodash: 4.17.21
-      resolve: 1.22.3
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@embroider/macros@1.13.3(@glint/template@1.2.1):
     resolution: {integrity: sha512-JUC1aHRLIN2LNy1l+gz7gWkw9JmnsE20GL3LduCzNvCAnEQpMTJhW5BUbEWqdCnAWBPte/M2ofckqBXyTZioTQ==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -2030,23 +2008,6 @@ packages:
       semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
-
-  /@embroider/shared-internals@2.5.0:
-    resolution: {integrity: sha512-7qzrb7GVIyNqeY0umxoeIvjDC+ay1b+wb2yCVuYTUYrFfLAkLEy9FNI3iWCi3RdQ9OFjgcAxAnwsAiPIMZZ3pQ==}
-    engines: {node: 12.* || 14.* || >= 16}
-    dependencies:
-      babel-import-util: 2.0.0
-      debug: 4.3.4
-      ember-rfc176-data: 0.3.18
-      fs-extra: 9.1.0
-      js-string-escape: 1.0.1
-      lodash: 4.17.21
-      resolve-package-path: 4.0.3
-      semver: 7.5.4
-      typescript-memoize: 1.1.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
 
   /@embroider/shared-internals@2.5.1:
     resolution: {integrity: sha512-b+TWDBisH1p6HeTbJIO8pgu1WzfTP0ZSAlZBqjXwOyrS0ZxP1qNYRrEX+IxyzIibEFjXBxeLakiejz3DJvZX5A==}
@@ -6139,8 +6100,8 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
-  /content-tag@1.1.0:
-    resolution: {integrity: sha512-bktivDORs9M890KwVKrIONYvHhwshfgF4b1G/TFPrjH12Ag2GDiSdxVHqIzMxWZ297VgIRPSImURlpcOzJP/LQ==}
+  /content-tag@1.1.2:
+    resolution: {integrity: sha512-AZkfc6TUmW+/RbZJioPzOQPAHHXqyqK4B0GNckJDjBAPK3SyGrMfn21bfFky/qwi5uoLph5sjAHUkO3CL6/IgQ==}
     dev: true
 
   /content-type@1.0.5:
