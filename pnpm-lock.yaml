@@ -158,8 +158,8 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       '@types/qunit':
-        specifier: ^2.19.8
-        version: 2.19.8
+        specifier: ^2.19.9
+        version: 2.19.9
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.12.0
         version: 6.12.0(@typescript-eslint/parser@6.9.1)(eslint@8.54.0)(typescript@5.2.2)
@@ -3106,8 +3106,8 @@ packages:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
     dev: true
 
-  /@types/qunit@2.19.8:
-    resolution: {integrity: sha512-L4JyeRG1CJGSzJKd1b78DX/ll91E8e50IXkkl8KzW6W0IWz6FTHWEYvTEi8QVNHkUqUu6hjTffwV7ffxcoka0g==}
+  /@types/qunit@2.19.9:
+    resolution: {integrity: sha512-Ym6B8Ewt1R1b0EgSqISSrAKp2Pg5MNgKK3/d2Fbls3PN7kNnucVSGaRx9Prxeo78HfQofYJMWDWLPlfAuwx7IQ==}
     dev: true
 
   /@types/range-parser@1.2.4:
