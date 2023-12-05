@@ -13,6 +13,7 @@
     "lint": "pnpm --filter '*' lint",
     "lint:fix": "pnpm --filter '*' lint:fix",
     "lint:types": "pnpm --filter '*' lint:types",
+    "postinstall": "lefthook install",
     "prepare": "pnpm build",
     "start": "concurrently 'pnpm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "pnpm --filter ember-amount-input start",
@@ -20,9 +21,12 @@
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@release-it-plugins/lerna-changelog": "^6.0.0",
     "@release-it-plugins/workspaces": "^4.0.0",
     "concurrently": "^8.2.2",
+    "lefthook": "^1.5.5",
     "prettier": "^3.1.0",
     "release-it": "^16.2.1"
   },
