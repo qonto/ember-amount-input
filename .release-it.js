@@ -8,10 +8,14 @@ module.exports = {
     "@release-it-plugins/workspaces": true,
   },
   git: {
+    commitMessage: "chore: release v${version}",
     tagName: "v${version}",
   },
   github: {
     release: true,
   },
   npm: false,
+  hooks: {
+    "after:bump": "pnpm i --frozen-lockfile=false",
+  },
 };
