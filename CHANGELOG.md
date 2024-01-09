@@ -1,5 +1,5 @@
 
-## v7.0.0-beta.0 (2023-11-17)
+## [7.0.0](https://github.com/qonto/ember-amount-input/compare/v6.0.2...v7.0.0) (2024-01-09)
 
 #### :boom: Breaking Change
 * [#656](https://github.com/qonto/ember-amount-input/pull/656) feat: drop node v16 ([@vscav](https://github.com/vscav))
