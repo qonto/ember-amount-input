@@ -4,6 +4,7 @@ module.exports = {
       preset: {
         name: "angular",
       },
+      infile: "CHANGELOG.md"
     },
     "@release-it-plugins/workspaces": true,
   },
