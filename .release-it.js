@@ -4,15 +4,19 @@ module.exports = {
       preset: {
         name: "angular",
       },
+      infile: "CHANGELOG.md"
     },
     "@release-it-plugins/workspaces": true,
   },
   git: {
+    commitMessage: "chore: release v${version}",
     tagName: "v${version}",
   },
   github: {
     release: true,
-    tokenRef: "GITHUB_AUTH",
   },
   npm: false,
+  hooks: {
+    "after:bump": "pnpm i --frozen-lockfile=false",
+  },
 };
