@@ -16,10 +16,10 @@ importers:
         version: 18.4.3
       '@release-it-plugins/workspaces':
         specifier: ^4.0.0
-        version: 4.0.0(release-it@16.2.1)
+        version: 4.0.0(release-it@16.3.0)
       '@release-it/conventional-changelog':
         specifier: ^8.0.1
-        version: 8.0.1(release-it@16.2.1)
+        version: 8.0.1(release-it@16.3.0)
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
@@ -30,8 +30,8 @@ importers:
         specifier: ^3.2.2
         version: 3.2.2
       release-it:
-        specifier: ^16.2.1
-        version: 16.2.1(typescript@5.3.3)
+        specifier: ^16.3.0
+        version: 16.3.0(typescript@5.3.3)
 
   ember-amount-input:
     dependencies:
@@ -2914,7 +2914,7 @@ packages:
       - supports-color
     dev: true
 
-  /@release-it-plugins/workspaces@4.0.0(release-it@16.2.1):
+  /@release-it-plugins/workspaces@4.0.0(release-it@16.3.0):
     resolution: {integrity: sha512-79qsR770mvuQeTSMnOjrEJuJHQ4x1KyUkZjqCOQ/UxjK+igNYYDsLK26LpKTweeTjpbpmLYaOg6bl+28M5CO0A==}
     engines: {node: '>= 16'}
     peerDependencies:
@@ -2922,7 +2922,7 @@ packages:
     dependencies:
       detect-indent: 6.1.0
       detect-newline: 3.1.0
-      release-it: 16.2.1(typescript@5.3.3)
+      release-it: 16.3.0(typescript@5.3.3)
       semver: 7.5.4
       url-join: 4.0.1
       validate-peer-dependencies: 1.2.0
@@ -2930,7 +2930,7 @@ packages:
       yaml: 2.3.4
     dev: true
 
-  /@release-it/conventional-changelog@8.0.1(release-it@16.2.1):
+  /@release-it/conventional-changelog@8.0.1(release-it@16.3.0):
     resolution: {integrity: sha512-pwc9jaBYDaSX5TXw6rEnPfqDkKJN2sFBhYpON1kBi9T3sA9EOBncC4ed0Bv3L1ciNb6eqEJXPfp+tQMqVlv/eg==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -2939,7 +2939,7 @@ packages:
       concat-stream: 2.0.0
       conventional-changelog: 5.1.0
       conventional-recommended-bump: 9.0.0
-      release-it: 16.2.1(typescript@5.3.3)
+      release-it: 16.3.0(typescript@5.3.3)
       semver: 7.5.4
     dev: true
 
@@ -13270,8 +13270,8 @@ packages:
     dependencies:
       jsesc: 0.5.0
 
-  /release-it@16.2.1(typescript@5.3.3):
-    resolution: {integrity: sha512-+bHiKPqkpld+NaiW+K/2WsjaHgfPB00J6uk8a+g8QyuBtzfFoMVe+GKsfaDO5ztEHRrSg+7luoXzd8IfvPNPig==}
+  /release-it@16.3.0(typescript@5.3.3):
+    resolution: {integrity: sha512-CP+WwKbgEvXreq6Iz9po3BtcyELtTxrt5RXRGnazQ0eCphPxFZR29+8sEZRCsJq2IKvlwb5mFUbf92u426oQog==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
