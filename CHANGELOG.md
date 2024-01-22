@@ -1,4 +1,20 @@
 
+
+# [7.1.0](https://github.com/qonto/ember-amount-input/compare/v7.0.0...v7.1.0) (2024-01-22)
+
+
+### Bug Fixes
+
+* bump lockfile post release and use semantic commit message ([9119d44](https://github.com/qonto/ember-amount-input/commit/9119d44901dbb83e693b961cce3d71c34da59bc9))
+* **ci:** remove wrong GH token used in release-it config ([cbe1462](https://github.com/qonto/ember-amount-input/commit/cbe14622ba69f03fe435c96a11060ee057e85538))
+* **ci:** set infile property in release-it config ([8f74536](https://github.com/qonto/ember-amount-input/commit/8f745366271a19241c533308c578800fcbd83a2f))
+* replace v7-beta0 with v7 in changelog ([6d66e42](https://github.com/qonto/ember-amount-input/commit/6d66e42b5842556baf393a03056b92f52eef6f26))
+
+
+### Features
+
+* **ci:** add manual release workflow ([78b5d84](https://github.com/qonto/ember-amount-input/commit/78b5d8440745081002f30728a407d615d0fdcdaf))
+
 ## [7.0.0](https://github.com/qonto/ember-amount-input/compare/v6.0.2...v7.0.0) (2024-01-09)
 
 #### :boom: Breaking Change
