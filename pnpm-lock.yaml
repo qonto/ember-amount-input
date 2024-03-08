@@ -124,7 +124,7 @@ importers:
   test-app:
     dependencies:
       ember-amount-input:
-        specifier: 7.1.0
+        specifier: 7.2.0
         version: link:../ember-amount-input
     devDependencies:
       '@babel/plugin-proposal-decorators':

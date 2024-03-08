@@ -1,5 +1,12 @@
 
 
+# [7.2.0](https://github.com/qonto/ember-amount-input/compare/v7.1.0...v7.2.0) (2024-03-08)
+
+
+### Features
+
+* handle pasted strings ([11ae13b](https://github.com/qonto/ember-amount-input/commit/11ae13b6a935d5b47719e85a0ed6ab8f99dc5a77))
+
 # [7.1.0](https://github.com/qonto/ember-amount-input/compare/v7.0.0...v7.1.0) (2024-01-22)
 
 
