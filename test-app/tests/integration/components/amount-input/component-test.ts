@@ -74,7 +74,7 @@ module('Integration | Component | amount-input', function (hooks) {
       />
     `);
 
-    assert.dom('.amount-input__currency').hasText('');
+    assert.dom('.amount-input__currency').doesNotExist();
     assert.dom('input').hasNoAttribute('placeholder');
     assert.dom('input').hasNoAttribute('id');
 
