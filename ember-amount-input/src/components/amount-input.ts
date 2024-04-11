@@ -5,6 +5,8 @@ import './amount-input.css';
 const KEY_CODE_E = 69;
 const KEY_CODE_FULLSTOP = 190;
 const KEY_CODE_COMMA = 188;
+const KEY_CODE_MINUS = 189;
+const KEY_MINUS = '-';
 
 export interface AmountInputArgs {
   /**
@@ -26,6 +28,11 @@ export interface AmountInputArgs {
    * A custom id applied on the input
    */
   inputId?: string;
+
+  /**
+   * Specifies if the input value should be restricted to integer only
+   */
+  integerOnly?: boolean;
 
   /**
    * Specifies the minimum value for the input field
@@ -103,6 +110,13 @@ export default class AmountInput extends Component<AmountInputSignature> {
   }
 
   /**
+   * Specifies if the input value should be restricted to integer only
+   */
+  get integerOnly(): boolean {
+    return this.argOrDefault('integerOnly', false);
+  }
+
+  /**
    * Specifies the number of decimals to use for the amount value.
    * Can be >= 0.
    * Defaults to 2.
@@ -130,7 +144,12 @@ export default class AmountInput extends Component<AmountInputSignature> {
 
   @action
   onKeyDown(event: KeyboardEvent): boolean {
+    const isMinus = event.keyCode === KEY_CODE_MINUS || event.key === KEY_MINUS;
+
     if (event.keyCode === KEY_CODE_E) {
+      event.preventDefault();
+      return false;
+    } else if (this.integerOnly && isMinus) {
       event.preventDefault();
       return false;
     } else if (

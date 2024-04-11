@@ -222,4 +222,45 @@ module('Integration | Component | amount-input', function (hooks) {
       });
     });
   });
+
+  module('integer only values', function () {
+    test('should not prevent negative values', async function (this: TestContext, assert) {
+      this.value = null as unknown as number;
+
+      await render<TestContext>(hbs`
+        <AmountInput
+          @numberOfDecimal={{0}}
+          @value={{this.value}}
+          @update={{fn (mut this.value)}}
+        />
+      `);
+
+      assert.dom('input').hasValue('');
+
+      await fillIn('input', '-1000');
+      await blur('input');
+
+      assert.dom('input').hasValue('-1000');
+    });
+
+    test('should prevent negative values', async function (this: TestContext, assert) {
+      this.value = 1;
+
+      await render<TestContext>(hbs`
+        <AmountInput
+          @numberOfDecimal={{0}}
+          @value={{this.value}}
+          @update={{fn (mut this.value)}}
+          @integerOnly={{true}}
+        />
+      `);
+
+      assert.dom('input').hasValue('1');
+
+      await typeIn('input', '-1000');
+      await blur('input');
+
+      assert.dom('input').hasValue('1000');
+    });
+  });
 });
