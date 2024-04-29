@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import './amount-input.css';
 
-const KEY_CODE_E = 69;
-const KEY_CODE_FULLSTOP = 190;
-const KEY_CODE_COMMA = 188;
+const KEY_E = 'e';
+const KEY_FULLSTOP = '.';
+const KEY_COMMA = ',';
 
 export interface AmountInputArgs {
   /**
@@ -130,12 +130,13 @@ export default class AmountInput extends Component<AmountInputSignature> {
 
   @action
   onKeyDown(event: KeyboardEvent): boolean {
-    if (event.keyCode === KEY_CODE_E) {
+    const pressedKey = event.key.toLowerCase();
+    if (pressedKey === KEY_E) {
       event.preventDefault();
       return false;
     } else if (
       this.numberOfDecimal === 0 &&
-      [KEY_CODE_FULLSTOP, KEY_CODE_COMMA].includes(event.keyCode)
+      [KEY_FULLSTOP, KEY_COMMA].includes(pressedKey)
     ) {
       event.preventDefault();
       return false;
