@@ -8,6 +8,11 @@ const KEY_COMMA = ',';
 
 export interface AmountInputArgs {
   /**
+   * The arial label for the input
+   */
+  ariaLabelledBy?: string;
+
+  /**
    * The currency displayed in the input
    */
   currency?: string;

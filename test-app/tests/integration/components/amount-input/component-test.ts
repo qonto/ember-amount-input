@@ -44,7 +44,8 @@ module('Integration | Component | amount-input', function (hooks) {
         @value={{this.value}}
         @min={{5}}
         @max={{10}}
-        @update={{fn (mut this.value)}} />
+        @update={{fn (mut this.value)}}
+        @ariaLabelledBy="foo" />
     `);
 
     assert.dom('.amount-input__currency').hasText('USD');
@@ -59,6 +60,7 @@ module('Integration | Component | amount-input', function (hooks) {
     assert.dom('input').hasAttribute('placeholder', '1.000.000');
     assert.dom('input').hasAttribute('min', '5');
     assert.dom('input').hasAttribute('max', '10');
+    assert.dom('input').hasAttribute('aria-labelledby', 'foo');
   });
 
   test('uses named property declared (even if undefined) instead of defaults', async function (this: TestContext, assert) {
