@@ -210,11 +210,11 @@ module('Integration | Component | amount-input', function (hooks) {
     module('and the value is not a valid amount', function () {
       test('calls update with an empty string value', async function (assert) {
         await render<TestContext>(hbs`
-        <AmountInput
-          @value={{this.value}}
-          @update={{fn (mut this.value)}}
-        />
-      `);
+          <AmountInput
+            @value={{this.value}}
+            @update={{fn (mut this.value)}}
+          />
+        `);
 
         await simulateUserPasteValue('input', 'foo');
 
