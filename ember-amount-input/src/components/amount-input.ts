@@ -157,14 +157,17 @@ export default class AmountInput extends Component<AmountInputSignature> {
 
   @action
   onPaste(event: ClipboardEvent): boolean {
+    event.preventDefault();
+
     const pastedValue = event.clipboardData?.getData('text');
     const parsedValue = parseFloat(pastedValue?.replace(/\s/g, '') ?? '');
 
     if (!isNaN(parsedValue)) {
       this.args.update(parsedValue.toFixed(this.numberOfDecimal));
+      return true;
     }
 
-    return true;
+    return false;
   }
 
   @action
