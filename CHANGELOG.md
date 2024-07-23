@@ -1,5 +1,18 @@
 
 
+# [7.3.0](https://github.com/qonto/ember-amount-input/compare/v7.2.0...v7.3.0) (2024-07-23)
+
+
+### Bug Fixes
+
+* hbs render format in component tests ([2c99bcb](https://github.com/qonto/ember-amount-input/commit/2c99bcb58513dbb98db570f1feeeb330aa150837))
+* prevent default pasting event ([2acb692](https://github.com/qonto/ember-amount-input/commit/2acb692a0e0bafb9f3c27035f9ac48b12ba17a46))
+
+
+### Features
+
+* use KeyboardEvent.key instead of KeyboardEvent.keyCode ([6ff26f6](https://github.com/qonto/ember-amount-input/commit/6ff26f62f26068b6f076f8c2a4038c93ea2eb4e3))
+
 # [7.2.0](https://github.com/qonto/ember-amount-input/compare/v7.1.0...v7.2.0) (2024-03-08)
 
 
