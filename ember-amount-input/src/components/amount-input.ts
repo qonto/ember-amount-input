@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { isEmpty } from '@ember/utils';
 import './amount-input.css';
 
 const KEY_E = 'e';
@@ -92,6 +93,13 @@ export default class AmountInput extends Component<AmountInputSignature> {
    */
   get currency(): string {
     return this.argOrDefault('currency', 'EUR');
+  }
+
+  /**
+   * Returns true if the currency is an empty string, null, or undefined.
+   */
+  get isCurrencyEmpty(): boolean {
+    return isEmpty(this.currency);
   }
 
   /**
