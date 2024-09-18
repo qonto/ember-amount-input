@@ -27,6 +27,8 @@
     "@release-it-plugins/workspaces": "^4.2.0",
     "@release-it/conventional-changelog": "^8.0.1",
     "concurrently": "^8.2.2",
+    "ember-amount-input": "workspace:7.3.0",
+    "ember-source": "5.11.0",
     "lefthook": "^1.5.5",
     "prettier": "^3.2.5",
     "release-it": "^17.6.0"
