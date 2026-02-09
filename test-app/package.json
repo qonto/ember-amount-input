@@ -82,7 +82,7 @@
     "prettier": "^3.2.5",
     "qunit": "^2.23.1",
     "qunit-dom": "^3.0.0",
-    "stylelint": "^16.2.1",
+    "stylelint": "^17.1.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-prettier": "^5.0.2",
     "tracked-built-ins": "^3.3.0",
