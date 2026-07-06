@@ -32,10 +32,10 @@
     "release-it": "^17.6.0"
   },
   "engines": {
-    "node": ">= 18"
+    "node": ">= 22"
   },
   "volta": {
-    "node": "18.15.0"
+    "node": "22.14.0"
   },
   "packageManager": "pnpm@8.6.5",
   "publishConfig": {
