@@ -9,6 +9,7 @@
   },
   "compilerOptions": {
     "allowJs": false,
+    "rootDir": "src",
     "declarationDir": "declarations",
     "skipLibCheck": true,
   }
