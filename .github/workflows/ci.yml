@@ -65,6 +65,30 @@ jobs:
           - ember-canary
           - embroider-safe
           - embroider-optimized
+        # Known, currently unfixed upstream limitations (not masked with allow-failure,
+        # intentionally left red so they stay visible):
+        #
+        # embroider-safe/embroider-optimized: @embroider/compat v4's compatBuild() now calls
+        # its packager as a plain function (the @embroider/vite contract), but
+        # @embroider/webpack's `Webpack` export is still the old class-based packager from
+        # Embroider's legacy stage1/stage2 pipeline. No @embroider/webpack release implements
+        # the new contract, so there is no version combination that works. A real fix requires
+        # migrating this addon's test-app to @embroider/vite — attempted, but the addon's
+        # component fails to render under Vite's test runner in a way that needs a real
+        # component-level fix, not just build tooling. See
+        # https://github.com/embroider-build/embroider/issues/2699 for upstream tracking.
+        #
+        # ember-beta/ember-canary/ember-release: ember-try's PnpmAdapter resolves these
+        # channels to prerelease-tagged tarballs and tries to force a single `ember-source`
+        # instance via `pnpm.overrides`, but it only ever writes that override into
+        # `test-app/package.json` — pnpm only honors `pnpm.overrides` declared at the
+        # workspace ROOT package.json, so the override silently no-ops. pnpm then installs a
+        # second, separate `ember-source` to satisfy the addon's peerDependency, splitting the
+        # Ember/Glimmer runtime into two divergent instances, which breaks component
+        # registration/rendering entirely. Not fixable from this repo without an upstream
+        # ember-try fix or restructuring test-app out of the pnpm workspace. The stable LTS
+        # scenarios (5.12/6.8/6.12) use plain semver ranges the addon's peerDependency
+        # satisfies directly, so they're unaffected.
 
     steps:
       - name: Checkout
