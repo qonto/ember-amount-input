@@ -27,7 +27,7 @@ module('Integration | Component | amount-input', function (hooks) {
       />
     `);
 
-    assert.dom('.amount-input').exists;
+    assert.dom('.amount-input').exists();
     assert.dom('input').hasAttribute('type', 'number');
   });
 
