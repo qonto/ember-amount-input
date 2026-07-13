@@ -28,7 +28,7 @@
     "@release-it/conventional-changelog": "^9.0.3",
     "concurrently": "^8.2.2",
     "lefthook": "^1.5.5",
-    "prettier": "^3.2.5",
+    "prettier": "^3.9.5",
     "release-it": "^17.6.0"
   },
   "engines": {

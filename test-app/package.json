@@ -79,7 +79,7 @@
     "eslint-plugin-qunit": "^8.1.2",
     "lerna-changelog": "^2.2.0",
     "loader.js": "^4.7.0",
-    "prettier": "^3.2.5",
+    "prettier": "^3.9.5",
     "qunit": "^2.23.1",
     "qunit-dom": "^3.0.0",
     "stylelint": "^16.2.1",
