@@ -1,10 +1,15 @@
 <div class='amount-input' ...attributes>
-  <span class='amount-input__currency {{if @value "black"}}'>
-    {{this.currency}}
-  </span>
+  {{#unless this.isCurrencyEmpty}}
+    <span class='amount-input__currency {{if @value "black"}}'>
+      {{this.currency}}
+    </span>
+  {{/unless}}
 
   <input
-    class='amount-input__value {{@inputClass}} {{if @disabled "disabled"}}'
+    class='amount-input__value
+      {{@inputClass}}
+      {{if @disabled "disabled"}}
+      {{unless this.isCurrencyEmpty "with-currency"}}'
     id={{this.inputId}}
     type='number'
     value={{@value}}
