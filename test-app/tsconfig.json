@@ -5,7 +5,8 @@
     // layout, which is not resolvable with the Node resolution algorithm, to
     // work with TypeScript.
     "baseUrl": ".",
-    "lib": ["es2015"],
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
     // Type check only the code specifically refered to in the source code.
     "skipLibCheck": true,
     "paths": {
