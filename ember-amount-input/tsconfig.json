@@ -11,5 +11,7 @@
     "allowJs": false,
     "declarationDir": "declarations",
     "skipLibCheck": true,
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
   }
 }
